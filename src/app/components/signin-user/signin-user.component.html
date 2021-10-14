@@ -1,0 +1,15 @@
+<p>signin-user works!</p>
+
+<div>
+    <br/>
+    <p>Email</p>
+    <input [(ngModel)]="user.email">
+    <br/>
+    <p>Name</p>
+    <input [(ngModel)]="user.name">
+    <br/>
+    <p>password</p>
+    <input [(ngModel)]="user.password"/>
+    <button (click)="saveUser()" class="btn btn-success">Submit</button>
+
+</div>
