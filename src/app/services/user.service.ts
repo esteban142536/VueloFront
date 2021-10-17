@@ -12,19 +12,17 @@ export class UserService {
 
   constructor(private http: HttpClient) { }
   
-  create(data: any): Observable<any> {
+  create(data: User): Observable<User> {
     return this.http.post(baseUrl, data);
   }
 
-
+  login(data: any): Observable<User> {
+    return this.http.get(baseUrl, {params:data});
+  }
 
   /*
   getAll(): Observable<User[]> {
     return this.http.get<User[]>(baseUrl);
-  }
-
-  login(data: any): Observable<User> {
-    return this.http.put(`${baseUrl}/login`,data);
   }
 
   update(id: any, data: any): Observable<any> {

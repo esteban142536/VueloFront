@@ -31,7 +31,7 @@ export class SigninUserComponent implements OnInit {
         console.log(response);
       },
       (error) => {
-        console.log('Error log in add user \n', error);
+        console.log('Error signin in add user \n', error);
       }
     );
   }
