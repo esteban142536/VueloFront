@@ -25,6 +25,7 @@ export class SigninUserComponent implements OnInit {
       password: this.user.password,
       type: 'user',
     };
+    ///data.type.
 
     this.userService.create(data).subscribe(
       (response) => {

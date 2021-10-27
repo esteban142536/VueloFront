@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SigninUserComponent } from './components/signin-user/signin-user.component';
 import { LoginUserComponent } from './components/login-user/login-user.component';
 import { UserIndexComponent } from './components/user-index/user-index.component';
+import { AddTipoAvionComponent } from './components/add-tipo-avion/add-tipo-avion.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { UserIndexComponent } from './components/user-index/user-index.component
     SigninUserComponent,
     LoginUserComponent,
     UserIndexComponent,
+    AddTipoAvionComponent,
   ],
   imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule],
   providers: [],
