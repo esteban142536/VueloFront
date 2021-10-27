@@ -12,7 +12,6 @@ export class AddTipoAvionComponent implements OnInit {
     cantidadAsientos: 0,
     cantidadFila: 0,
     nombre: '',
-    id: '',
   };
 
   constructor(private tipoAvionServise: tipoAvionServise) {}

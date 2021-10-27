@@ -26,7 +26,7 @@ export class LoginUserComponent implements OnInit {
 
     this.userService.login(data).subscribe(
       (response) => {
-        console.log(response);
+        console.log(response._id);
         this.router.navigate(['index']);
       },
       (error) => {

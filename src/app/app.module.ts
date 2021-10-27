@@ -9,6 +9,8 @@ import { SigninUserComponent } from './components/signin-user/signin-user.compon
 import { LoginUserComponent } from './components/login-user/login-user.component';
 import { UserIndexComponent } from './components/user-index/user-index.component';
 import { AddTipoAvionComponent } from './components/add-tipo-avion/add-tipo-avion.component';
+import { FindRutaIDComponent } from './components/find-ruta-id/find-ruta-id.component';
+import { CreateRutaComponent } from './components/create-ruta/create-ruta.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { AddTipoAvionComponent } from './components/add-tipo-avion/add-tipo-avio
     LoginUserComponent,
     UserIndexComponent,
     AddTipoAvionComponent,
+    FindRutaIDComponent,
+    CreateRutaComponent,
   ],
   imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule],
   providers: [],

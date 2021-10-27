@@ -1,5 +1,5 @@
 export class tipoAvion {
-    id?: any;
+    _id?: String;
     nombre?: String;
     cantidadFila?: Number;
     cantidadAsientos?: Number;
