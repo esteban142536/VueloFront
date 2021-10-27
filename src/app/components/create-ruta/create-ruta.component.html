@@ -1,1 +1,17 @@
 <p>create-ruta works!</p>
+<div>
+  <br />
+  <p>origen</p>
+  <input [(ngModel)]="ruta.origen" />
+  <br />
+  <p>destino</p>
+  <input [(ngModel)]="ruta.destino" />
+  <br />
+  <p>duracion</p>
+  <input [(ngModel)]="ruta.duracion" />
+  <br />
+  <p>precio</p>
+  <input [(ngModel)]="ruta.precio" />
+
+  <button (click)="saveRuta()" class="btn btn-success">Submit</button>
+</div>
