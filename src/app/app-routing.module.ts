@@ -6,6 +6,7 @@ import { UserIndexComponent } from './components/user-index/user-index.component
 import { AddTipoAvionComponent } from './components/add-tipo-avion/add-tipo-avion.component';
 import { FindRutaIDComponent } from './components/find-ruta-id/find-ruta-id.component';
 import { CreateRutaComponent } from './components/create-ruta/create-ruta.component';
+import { CreateAsientoComponent } from './components/create-asiento/create-asiento.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'api', pathMatch: 'full' }, //index
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'addTipoAvion', component: AddTipoAvionComponent },
   { path: 'findRuta', component: FindRutaIDComponent }, //buscar al ruta por el id
   { path: 'createRuta', component: CreateRutaComponent },
+  { path: 'createAsiento', component: CreateAsientoComponent },
 ];
 
 @NgModule({

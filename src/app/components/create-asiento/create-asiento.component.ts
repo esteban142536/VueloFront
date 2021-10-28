@@ -9,7 +9,6 @@ import { asientoServise } from 'src/app/services/asiento.service';
 })
 export class CreateAsientoComponent implements OnInit {
   asiento: asiento = {
-    ID_Asiento: '',
     ID_Fila: '',
     ID_Tiquete: '',
     ID_Vuelo: '',
@@ -17,10 +16,22 @@ export class CreateAsientoComponent implements OnInit {
 
   constructor(private asientoServise: asientoServise) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {} //nota: fallara porque no existe llaves foraneas a que asociar
 
-saveAsiento():void{
-  
-}
+  saveAsiento(): void {
+    const data: asiento = {
+      ID_Fila: this.asiento.ID_Fila,
+      ID_Tiquete: this.asiento.ID_Tiquete,
+      ID_Vuelo: this.asiento.ID_Vuelo,
+    };
 
+    this.asientoServise.create(data).subscribe(
+      (response) => {
+        console.log(response);
+      },
+      (error) => {
+        console.log('Error en agregar ruta \n', error);
+      }
+    );
+  }
 }

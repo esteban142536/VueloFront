@@ -1,1 +1,14 @@
 <p>create-asiento works!</p>
+<div>
+    <br />
+    <p>ID_Fila</p>
+    <input [(ngModel)]="asiento.ID_Fila" />
+    <br />
+    <p>ID_Tiquete</p>
+    <input [(ngModel)]="asiento.ID_Tiquete" />
+    <br />
+    <p>ID_Vuelo</p>
+    <input [(ngModel)]="asiento.ID_Vuelo" />
+  
+    <button (click)="saveAsiento()" class="btn btn-success">Submit</button>
+  </div>
