@@ -9,7 +9,7 @@ import { asientoServise } from 'src/app/services/asiento.service';
 })
 export class CreateAsientoComponent implements OnInit {
   asiento: asiento = {
-    ID_Fila: '',
+    Fila: '',
     ID_Tiquete: '',
     ID_Vuelo: '',
   };
@@ -20,9 +20,9 @@ export class CreateAsientoComponent implements OnInit {
 
   saveAsiento(): void {
     const data: asiento = {
-      ID_Fila: this.asiento.ID_Fila,
-      ID_Tiquete: this.asiento.ID_Tiquete,
-      ID_Vuelo: this.asiento.ID_Vuelo,
+      Fila: this.asiento.Fila,
+      ID_Tiquete: this.asiento.ID_Tiquete||'',
+      ID_Vuelo: this.asiento.ID_Vuelo||'',
     };
 
     this.asientoServise.create(data).subscribe(

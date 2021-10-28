@@ -9,7 +9,7 @@ import { asientoServise } from 'src/app/services/asiento.service';
 })
 export class BuscarAsientoIDComponent implements OnInit {
   asiento: asiento = {
-    ID_Fila: '',
+    Fila: '',
     ID_Tiquete: '',
     ID_Vuelo: '',
   };
