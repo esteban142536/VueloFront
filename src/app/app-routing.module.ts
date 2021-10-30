@@ -6,8 +6,7 @@ import { UserIndexComponent } from './components/user-index/user-index.component
 import { AddTipoAvionComponent } from './components/add-tipo-avion/add-tipo-avion.component';
 import { FindRutaIDComponent } from './components/find-ruta-id/find-ruta-id.component';
 import { CreateRutaComponent } from './components/create-ruta/create-ruta.component';
-import { CreateAsientoComponent } from './components/create-asiento/create-asiento.component';
-import { BuscarAsientoIDComponent } from './components/buscar-asiento-id/buscar-asiento-id.component';
+import { CreateVueloComponent } from './components/create-vuelo/create-vuelo.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'api', pathMatch: 'full' }, //index
@@ -15,10 +14,9 @@ const routes: Routes = [
   { path: 'login', component: LoginUserComponent },
   { path: 'index', component: UserIndexComponent },
   { path: 'addTipoAvion', component: AddTipoAvionComponent },
-  { path: 'findRuta', component: FindRutaIDComponent }, //buscar al ruta por el id
+  { path: 'findRuta', component: FindRutaIDComponent },
   { path: 'createRuta', component: CreateRutaComponent },
-  { path: 'createAsiento', component: CreateAsientoComponent },
-  { path: 'findAsiento', component: BuscarAsientoIDComponent },
+  { path: 'createVuelo', component: CreateVueloComponent },
 ];
 
 @NgModule({

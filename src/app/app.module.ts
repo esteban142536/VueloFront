@@ -11,8 +11,7 @@ import { UserIndexComponent } from './components/user-index/user-index.component
 import { AddTipoAvionComponent } from './components/add-tipo-avion/add-tipo-avion.component';
 import { FindRutaIDComponent } from './components/find-ruta-id/find-ruta-id.component';
 import { CreateRutaComponent } from './components/create-ruta/create-ruta.component';
-import { CreateAsientoComponent } from './components/create-asiento/create-asiento.component';
-import { BuscarAsientoIDComponent } from './components/buscar-asiento-id/buscar-asiento-id.component';
+import { CreateVueloComponent } from './components/create-vuelo/create-vuelo.component';
 
 @NgModule({
   declarations: [
@@ -23,8 +22,7 @@ import { BuscarAsientoIDComponent } from './components/buscar-asiento-id/buscar-
     AddTipoAvionComponent,
     FindRutaIDComponent,
     CreateRutaComponent,
-    CreateAsientoComponent,
-    BuscarAsientoIDComponent,
+    CreateVueloComponent,
   ],
   imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule],
   providers: [],
