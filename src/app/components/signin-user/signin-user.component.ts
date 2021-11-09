@@ -34,7 +34,6 @@ export class SigninUserComponent implements OnInit {
       direccion: this.user.direccion,
       telefono: this.user.telefono,
     };
-   console.log(data)
 
     this.userService.create(data).subscribe(
       (response) => {
