@@ -1,5 +1,5 @@
 export class ruta{
-  _id?: String;
+  _id?: any;
   origen?: String;
   destino?: String;
   duracion?: Number;

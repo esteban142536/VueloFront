@@ -1,8 +1,8 @@
 export class vuelo {
-  _id?: String;
+  _id?: any;
   numeroVuelo?: String;
   fechaIda?:Date;
-  ID_TipoAvion?: String;
-  ID_Ruta?: String;
+  ID_TipoAvion?: any;
+  ID_Ruta?: any;
   Marca?: String;
 }

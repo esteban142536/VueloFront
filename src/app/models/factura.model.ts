@@ -1,8 +1,8 @@
 export class factura {
-  _id?: String;
-  ID_Usuario?: String;
+  _id?: any;
+  ID_Usuario?: any;
   fecha?: Date;
-  ID_Tiquete?: String;
+  ID_Tiquete?: any;
   IVA?: Number;
   Total?: Number;
 }

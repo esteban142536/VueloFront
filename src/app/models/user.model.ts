@@ -1,7 +1,12 @@
 export class User {
-  _id?: String;
-  name?: String;
-  type?: String;
+  _id?: any;
+  nombre?: String;
+  apellido?: String;
+  tipoUsuario?: String;
   password?: String;
   email?: String;
+  fecNacimient?: Date;
+  edad?: Number;
+  direccion?: String;
+  telefono?: Number;
 }

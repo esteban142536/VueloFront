@@ -9,8 +9,8 @@ import { vueloServise } from 'src/app/services/vuelo.service';
 })
 export class CreateVueloComponent implements OnInit {
   vuelo: vuelo = {
-    ID_Ruta: '',
-    ID_TipoAvion: '',
+    ID_Ruta: null,
+    ID_TipoAvion: null,
     Marca: '',
     numeroVuelo: '',
   };

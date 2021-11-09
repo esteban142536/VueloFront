@@ -9,9 +9,14 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class SigninUserComponent implements OnInit {
   user: User = {
-    email: '',
-    name: '',
     password: '',
+    email: '',
+    nombre: '',
+    apellido: '',
+    fecNacimient: undefined,
+    edad: 0,
+    direccion: '',
+    telefono: 0,
   };
 
   constructor(private userService: UserService) {}
@@ -21,11 +26,15 @@ export class SigninUserComponent implements OnInit {
   saveUser(): void {
     const data = {
       email: this.user.email,
-      name: this.user.name,
       password: this.user.password,
-      type: 'user',
+      nombre: this.user.nombre,
+      apellido: this.user.apellido,
+      fecNacimient: this.user.fecNacimient,
+      edad: this.user.edad,
+      direccion: this.user.direccion,
+      telefono: this.user.telefono,
     };
-    ///data.type.
+   console.log(data)
 
     this.userService.create(data).subscribe(
       (response) => {
