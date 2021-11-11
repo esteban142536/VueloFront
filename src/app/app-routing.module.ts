@@ -7,16 +7,22 @@ import { AddTipoAvionComponent } from './components/add-tipo-avion/add-tipo-avio
 import { FindRutaIDComponent } from './components/find-ruta-id/find-ruta-id.component';
 import { CreateRutaComponent } from './components/create-ruta/create-ruta.component';
 import { CreateVueloComponent } from './components/create-vuelo/create-vuelo.component';
+import { EditarRutaComponent } from './components/editar-ruta/editar-ruta.component';
+import { EditarVueloComponent } from './components/editar-vuelo/editar-vuelo.component';
+import { EditarTipoAvionComponent } from './components/editar-tipo-avion/editar-tipo-avion.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'api', pathMatch: 'full' }, //index
+  { path: '', component: UserIndexComponent }, //index
   { path: 'signin', component: SigninUserComponent },
   { path: 'login', component: LoginUserComponent },
-  { path: 'index', component: UserIndexComponent },
   { path: 'addTipoAvion', component: AddTipoAvionComponent },
   { path: 'findRuta', component: FindRutaIDComponent },
   { path: 'createRuta', component: CreateRutaComponent },
   { path: 'createVuelo', component: CreateVueloComponent },
+  { path: 'editarRuta', component: EditarRutaComponent },
+  { path: 'editarVuelo', component: EditarVueloComponent },
+  { path: 'editarVuelo', component: EditarVueloComponent },
+  { path: 'editarTipoAvion', component: EditarTipoAvionComponent },
 ];
 
 @NgModule({

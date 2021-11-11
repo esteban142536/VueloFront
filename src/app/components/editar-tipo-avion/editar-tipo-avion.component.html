@@ -1,0 +1,18 @@
+<p>editar-tipo-avion works!</p>
+<br />
+<div>
+  <br />
+  <p>_id</p>
+  <input [(ngModel)]="tipoAvionNuevo._id" />
+  <br />
+  <p>cantidadFila</p>
+  <input [(ngModel)]="tipoAvionNuevo.cantidadFila" />
+  <br />
+  <p>cantidadAsientos</p>
+  <input [(ngModel)]="tipoAvionNuevo.cantidadAsientos" />
+  <br />
+  <p>nombre</p>
+  <input [(ngModel)]="tipoAvionNuevo.nombre" />
+  <br />
+  <button (click)="updateTipoAvion()" class="btn btn-success">Actualizar datos del tipo de avion</button>
+</div>

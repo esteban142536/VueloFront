@@ -1,0 +1,21 @@
+<p>editar-vuelo works!</p>
+<div>
+  <br />
+  <p>_id</p>
+  <input [(ngModel)]="vueloNuevo._id" />
+  <br />
+  <p>numeroVuelo</p>
+  <input [(ngModel)]="vueloNuevo.numeroVuelo" />
+  <br />
+  <p>Marca</p>
+  <input [(ngModel)]="vueloNuevo.marca" />
+  <br />
+  <p>ID_TipoAvion</p>
+  <input [(ngModel)]="vueloNuevo.ID_TipoAvion" />
+  <br />
+  <p>ID_Ruta</p>
+  <input [(ngModel)]="vueloNuevo.ID_Ruta" />
+  <br />
+
+  <button (click)="updateVuelo()" class="btn btn-success">Submit</button>
+</div>

@@ -33,6 +33,7 @@ export class SigninUserComponent implements OnInit {
       edad: this.user.edad,
       direccion: this.user.direccion,
       telefono: this.user.telefono,
+      _id: null,
     };
 
     this.userService.create(data).subscribe(

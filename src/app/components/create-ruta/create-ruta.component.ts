@@ -25,6 +25,7 @@ export class CreateRutaComponent implements OnInit {
       duracion: this.ruta.duracion,
       origen: this.ruta.origen,
       precio: this.ruta.precio,
+     _id:null,
     };
 
     this.rutaService.create(data).subscribe(
