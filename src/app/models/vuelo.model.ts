@@ -4,5 +4,5 @@ export class vuelo {
   fechaIda?:Date;
   ID_TipoAvion?: any;
   ID_Ruta?: any;
-  Marca?: String;
+  marca?: String;
 }

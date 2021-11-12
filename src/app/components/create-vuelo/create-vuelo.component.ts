@@ -9,22 +9,26 @@ import { vueloServise } from 'src/app/services/vuelo.service';
 })
 export class CreateVueloComponent implements OnInit {
   vuelo: vuelo = {
+    _id:null,
     ID_Ruta: null,
     ID_TipoAvion: null,
-    Marca: '',
+    marca: '',
     numeroVuelo: '',
+    fechaIda:undefined
   };
-
+  
   constructor(private vueloServise: vueloServise) {}
-
+  
   ngOnInit(): void {}
-
+  
   saveAvion(): void {
     const data: vuelo = {
       ID_Ruta: this.vuelo.ID_Ruta,
       ID_TipoAvion: this.vuelo.ID_TipoAvion,
-      Marca: this.vuelo.Marca,
+      marca: this.vuelo.marca,
       numeroVuelo: this.vuelo.numeroVuelo,
+      fechaIda:this.vuelo.fechaIda,
+      _id:null,
     };
 
     this.vueloServise.create(data).subscribe(

@@ -1,0 +1,20 @@
+<p>editar-ruta works!</p>
+<div>
+    <br />
+    <p>id</p>
+    <input [(ngModel)]="rutaNueva._id" />
+    <br />
+    <p>origen</p>
+    <input [(ngModel)]="rutaNueva.origen" />
+    <br />
+    <p>destino</p>
+    <input [(ngModel)]="rutaNueva.destino" />
+    <br />
+    <p>duracion</p>
+    <input [(ngModel)]="rutaNueva.duracion" />
+    <br />
+    <p>precio</p>
+    <input [(ngModel)]="rutaNueva.precio" />
+  
+    <button (click)="updateRuta()" class="btn btn-success">update the route</button>
+  </div>
