@@ -7,6 +7,7 @@ import { AddTipoAvionComponent } from './components/add-tipo-avion/add-tipo-avio
 import { FindRutaIDComponent } from './components/find-ruta-id/find-ruta-id.component';
 import { CreateRutaComponent } from './components/create-ruta/create-ruta.component';
 import { CreateVueloComponent } from './components/create-vuelo/create-vuelo.component';
+import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'api', pathMatch: 'full' }, //index
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'findRuta', component: FindRutaIDComponent },
   { path: 'createRuta', component: CreateRutaComponent },
   { path: 'createVuelo', component: CreateVueloComponent },
+  { path: 'acercaDe', component: AcercaDeComponent },
 ];
 
 @NgModule({
