@@ -16,6 +16,8 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { EditarRutaComponent } from './components/editar-ruta/editar-ruta.component';
 import { EditarVueloComponent } from './components/editar-vuelo/editar-vuelo.component';
 import { EditarTipoAvionComponent } from './components/editar-tipo-avion/editar-tipo-avion.component';
+import { EditarTiqueteComponent } from './components/editar-tiquete/editar-tiquete.component';
+import { CreateTiqueteComponent } from './components/create-tiquete/create-tiquete.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,8 @@ import { EditarTipoAvionComponent } from './components/editar-tipo-avion/editar-
     EditarRutaComponent,
     EditarVueloComponent,
     EditarTipoAvionComponent,
+    EditarTiqueteComponent,
+    CreateTiqueteComponent,
   ],
   imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule],
   providers: [],

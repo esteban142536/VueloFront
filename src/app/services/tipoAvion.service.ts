@@ -16,7 +16,7 @@ export class tipoAvionServise {
   }
 
   update(data: tipoAvion): Observable<tipoAvion> {
-    return this.http.put(baseUrl+'/'+data._id, data);
+    return this.http.put(baseUrl + '/' + data._id, data);
   }
 
   getById(data: any): Observable<tipoAvion> {
