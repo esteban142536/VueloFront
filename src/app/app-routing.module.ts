@@ -11,9 +11,11 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { EditarRutaComponent } from './components/editar-ruta/editar-ruta.component';
 import { EditarVueloComponent } from './components/editar-vuelo/editar-vuelo.component';
 import { EditarTipoAvionComponent } from './components/editar-tipo-avion/editar-tipo-avion.component';
+import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
-  { path: '', component: UserIndexComponent }, //index
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
   { path: 'signin', component: SigninUserComponent },
   { path: 'login', component: LoginUserComponent },
   { path: 'addTipoAvion', component: AddTipoAvionComponent },

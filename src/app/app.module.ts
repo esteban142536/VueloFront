@@ -16,6 +16,18 @@ import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { EditarRutaComponent } from './components/editar-ruta/editar-ruta.component';
 import { EditarVueloComponent } from './components/editar-vuelo/editar-vuelo.component';
 import { EditarTipoAvionComponent } from './components/editar-tipo-avion/editar-tipo-avion.component';
+import { HomeComponent } from './components/home/home.component';
+
+//Angular material
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconModule } from '@angular/material/icon';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { FooterComponent } from './components/footer/footer.component'
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatDividerModule} from '@angular/material/divider';
+import { CarouselModule } from 'ngx-owl-carousel-o';
 
 @NgModule({
   declarations: [
@@ -31,8 +43,21 @@ import { EditarTipoAvionComponent } from './components/editar-tipo-avion/editar-
     EditarRutaComponent,
     EditarVueloComponent,
     EditarTipoAvionComponent,
+    HomeComponent,
+    NavbarComponent,
+    FooterComponent,
   ],
-  imports: [AppRoutingModule, BrowserModule, FormsModule, HttpClientModule],
+  imports: [
+    AppRoutingModule, 
+    BrowserModule, FormsModule, 
+    HttpClientModule, 
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatGridListModule,
+    MatDividerModule,
+    CarouselModule],
   providers: [],
   bootstrap: [AppComponent],
 })
