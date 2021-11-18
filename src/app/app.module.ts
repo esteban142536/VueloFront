@@ -28,6 +28,8 @@ import { FooterComponent } from './components/footer/footer.component'
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatDividerModule} from '@angular/material/divider';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { EditarTiqueteComponent } from './components/editar-tiquete/editar-tiquete.component';
+import { CreateTiqueteComponent } from './components/create-tiquete/create-tiquete.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
+    EditarTiqueteComponent,
+    CreateTiqueteComponent,
   ],
   imports: [
     AppRoutingModule, 
