@@ -1,3 +1,4 @@
+
 <mat-toolbar color="primary" class=mat-elevation-z6 >
     <a mat-button>
         <img 
@@ -8,10 +9,21 @@
     </a>
 
     <a mat-button routerLink="home">Inicio</a>
-    <a mat-button>Vuelo</a>
-    <a mat-button>Historia</a>
-    <a mat-button>Acerda de</a>
-    <a mat-button>Contáctenos</a>
+    <a mat-button routerLink="tiquete">Vuelo</a>
+    <button mat-button [matMenuTriggerFor]="administrativo">Administrativo</button>
+    <mat-menu #administrativo="matMenu">
+        <button mat-menu-item [matMenuTriggerFor]="mantenimiento">Mantenimiento</button>
+        <button mat-menu-item>Reporte</button>
+    </mat-menu>
+
+    <mat-menu #mantenimiento="matMenu">
+        <button mat-menu-item>Avión</button>
+        <button mat-menu-item>Venta</button>
+        <button mat-menu-item>Usuario</button>
+    </mat-menu>
+    <a mat-button routerLink="historia">Historia</a>
+    <a mat-button routerLink="acercaDe">Acerda de</a>
+    <a mat-button routerLink="contactenos">Contáctenos</a>
 
     <div class="spacer"></div>
 

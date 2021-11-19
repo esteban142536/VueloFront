@@ -1,6 +1,14 @@
-<p>signin-user works!</p>
 
 <div>
+    <div class="example-container">
+        <mat-form-field appearance="fill">
+          <mat-label>Enter your email</mat-label>
+          <input matInput placeholder="pat@example.com"  required>
+          <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+      </div>
+
+
     <br/>
     <p>Email</p>
     <input [(ngModel)]="user.email">

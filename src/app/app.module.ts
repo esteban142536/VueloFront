@@ -17,6 +17,11 @@ import { EditarRutaComponent } from './components/editar-ruta/editar-ruta.compon
 import { EditarVueloComponent } from './components/editar-vuelo/editar-vuelo.component';
 import { EditarTipoAvionComponent } from './components/editar-tipo-avion/editar-tipo-avion.component';
 import { HomeComponent } from './components/home/home.component';
+import { TiqueteComponent } from './components/tiquete/tiquete.component';
+import { HistoriaComponent } from './components/historia/historia.component';
+import { ReporteComponent } from './components/reporte/reporte.component';
+import { ContactenosComponent } from './components/contactenos/contactenos.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 //Angular material
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -25,11 +30,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatIconModule } from '@angular/material/icon';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component'
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatDividerModule} from '@angular/material/divider';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDividerModule } from '@angular/material/divider';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { EditarTiqueteComponent } from './components/editar-tiquete/editar-tiquete.component';
 import { CreateTiqueteComponent } from './components/create-tiquete/create-tiquete.component';
+import { MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -50,6 +56,10 @@ import { CreateTiqueteComponent } from './components/create-tiquete/create-tique
     FooterComponent,
     EditarTiqueteComponent,
     CreateTiqueteComponent,
+    TiqueteComponent,
+    HistoriaComponent,
+    ReporteComponent,
+    ContactenosComponent,
   ],
   imports: [
     AppRoutingModule, 
@@ -61,7 +71,9 @@ import { CreateTiqueteComponent } from './components/create-tiquete/create-tique
     MatIconModule,
     MatGridListModule,
     MatDividerModule,
-    CarouselModule],
+    CarouselModule,
+    MatMenuModule,
+    MatFormFieldModule],
   providers: [],
   bootstrap: [AppComponent],
 })
