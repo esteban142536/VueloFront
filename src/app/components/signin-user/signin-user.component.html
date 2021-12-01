@@ -3,11 +3,14 @@
     <div class="example-container">
         <mat-form-field appearance="fill">
           <mat-label>Enter your email</mat-label>
-          <input matInput placeholder="pat@example.com"  required>
+          <input matInput 
+          [(ngModel)]="user.email" 
+          placeholder="pat@example.com" 
+          [formControl]="email" 
+          required >
           <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
         </mat-form-field>
       </div>
-
 
     <br/>
     <p>Email</p>

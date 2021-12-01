@@ -36,6 +36,7 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { EditarTiqueteComponent } from './components/editar-tiquete/editar-tiquete.component';
 import { CreateTiqueteComponent } from './components/create-tiquete/create-tiquete.component';
 import { MatMenuModule} from '@angular/material/menu';
+import { ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -73,7 +74,8 @@ import { MatMenuModule} from '@angular/material/menu';
     MatDividerModule,
     CarouselModule,
     MatMenuModule,
-    MatFormFieldModule],
+    MatFormFieldModule,
+    ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
