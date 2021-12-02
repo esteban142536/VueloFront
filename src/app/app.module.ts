@@ -37,7 +37,9 @@ import { EditarTiqueteComponent } from './components/editar-tiquete/editar-tique
 import { CreateTiqueteComponent } from './components/create-tiquete/create-tiquete.component';
 import { MatMenuModule} from '@angular/material/menu';
 import { ReactiveFormsModule} from '@angular/forms';
-
+import { CarouselSliderComponent } from './components/carousel-slider/carousel-slider.component';
+import { MatCarouselModule } from '@ngmodule/material-carousel';
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -61,6 +63,7 @@ import { ReactiveFormsModule} from '@angular/forms';
     HistoriaComponent,
     ReporteComponent,
     ContactenosComponent,
+    CarouselSliderComponent,
   ],
   imports: [
     AppRoutingModule, 
@@ -75,7 +78,8 @@ import { ReactiveFormsModule} from '@angular/forms';
     CarouselModule,
     MatMenuModule,
     MatFormFieldModule,
-    ReactiveFormsModule],
+    ReactiveFormsModule,
+    MatCarouselModule.forRoot(),],
   providers: [],
   bootstrap: [AppComponent],
 })
