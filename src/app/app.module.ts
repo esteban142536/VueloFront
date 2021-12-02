@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
 //component created my us
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -39,7 +40,8 @@ import { MatMenuModule} from '@angular/material/menu';
 import { ReactiveFormsModule} from '@angular/forms';
 import { CarouselSliderComponent } from './components/carousel-slider/carousel-slider.component';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
- 
+import { MatCardModule } from '@angular/material/card';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -79,7 +81,8 @@ import { MatCarouselModule } from '@ngmodule/material-carousel';
     MatMenuModule,
     MatFormFieldModule,
     ReactiveFormsModule,
-    MatCarouselModule.forRoot(),],
+    MatCarouselModule.forRoot(),
+    MatCardModule,],
   providers: [],
   bootstrap: [AppComponent],
 })

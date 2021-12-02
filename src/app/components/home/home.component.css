@@ -1,0 +1,115 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/*OFERTAS ESPECIALES*/
+.ofertasEspeciales {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 90px;
+  padding-top: 110px;
+}
+
+.ofertas {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.content {
+  width: 200px;
+}
+
+.content p {
+  font-size: 18px;
+  font-weight: lighter;
+}
+
+.ofertas-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 150px;
+  margin-bottom: 15px;
+}
+
+/*HISTORIA*/
+.historia {
+  width: 100%;
+  height: 450px;
+  background-image: url("~src/assets/img/historia.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.content-historia {
+  width: 80%;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 100px;
+}
+
+.historia p {
+  color: white;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.content-historia h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.buttom-historia a{
+  color: white;
+  font-size: 20px;
+  float: right;
+  margin-top: 50px;
+}
+
+a:hover{
+    font-weight: bolder;
+  }
+
+/*EQUIPO*/
+.equipo {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 100px;
+  padding-top: 110px;
+}
+
+.equipoTrabajo {
+  margin-left: 150px;
+  margin-right: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.content {
+  width: 400px;
+}
+
+.cards {
+  max-width: 300px;
+  -webkit-box-shadow: 1px 18px 27px 4px rgba(31, 31, 31, 0.68);
+  -moz-box-shadow: 1px 18px 27px 4px rgba(31, 31, 31, 0.68);
+  box-shadow: 1px 18px 27px 4px rgba(122, 122, 122, 0.68);
+}
+
+.header-image1 {
+  background-image: url("~src/assets/img/Adriana.jpeg");
+  background-size: cover;
+}
+
+.header-image2 {
+  background-image: url("~src/assets/img/Esteban.jpg");
+  background-size: cover;
+}
