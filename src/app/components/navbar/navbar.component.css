@@ -1,8 +1,29 @@
-.spacer{
-    flex: 1 1 auto;
-  }
-  
-  .logo{
-    width: 160px; 
-    height: 50px;
-  }
+a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
+ a:hover {
+  color: #01c9b0;
+  font-weight: bolder;
+
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.logo {
+  width: 160px;
+  height: 50px;
+}
+
+button{
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 20px;
+}
+
+button:hover{
+  font-weight: bolder;
+}

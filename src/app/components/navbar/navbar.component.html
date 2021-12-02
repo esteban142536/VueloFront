@@ -1,31 +1,36 @@
+<nav>
 
-<mat-toolbar color="primary" class=mat-elevation-z6 >
-    <a mat-button>
-        <img 
-        class="logo" 
-        src="assets/img/logo.png" 
-        alt="Logo" 
-        routerLink="home">
-    </a>
+    <mat-toolbar color="primary" class=mat-elevation-z6>
+        <a mat-button>
+            <img class="logo" src="assets/img/logo.png" alt="Logo" routerLink="home">
+        </a>
 
-    <a mat-button routerLink="home">Inicio</a>
-    <a mat-button routerLink="tiquete">Vuelo</a>
-    <button mat-button [matMenuTriggerFor]="administrativo">Administrativo</button>
-    <mat-menu #administrativo="matMenu">
-        <button mat-menu-item [matMenuTriggerFor]="mantenimiento">Mantenimiento</button>
-        <button mat-menu-item>Reporte</button>
-    </mat-menu>
+        <a mat-button routerLink="home">Inicio</a>
+        <a mat-button routerLink="tiquete">Vuelo</a>
 
-    <mat-menu #mantenimiento="matMenu">
-        <button mat-menu-item>Avión</button>
-        <button mat-menu-item>Venta</button>
-        <button mat-menu-item>Usuario</button>
-    </mat-menu>
-    <a mat-button routerLink="historia">Historia</a>
-    <a mat-button routerLink="acercaDe">Acerda de</a>
-    <a mat-button routerLink="contactenos">Contáctenos</a>
+        <a>
+            <button mat-button [matMenuTriggerFor]="administrativo">Administrativo</button>
+        </a> 
 
-    <div class="spacer"></div>
+        <mat-menu #administrativo="matMenu">
+            <button mat-menu-item [matMenuTriggerFor]="mantenimiento">Mantenimiento</button>
+            <button mat-menu-item>Reporte</button>
+        </mat-menu>
 
-    <a mat-flat-button routerLink="signin" color="accent">Acceder</a>
-</mat-toolbar>
+        <mat-menu #mantenimiento="matMenu">
+            <button mat-menu-item>Avión</button>
+            <button mat-menu-item>Venta</button>
+            <button mat-menu-item>Usuario</button>
+        </mat-menu>
+
+        <a mat-button routerLink="historia">Historia</a>
+        <a mat-button routerLink="acercaDe">Equipo</a>
+        <a mat-button routerLink="contactenos">Contáctenos</a>
+
+        <div class="spacer"></div>
+
+        <div class="acceder">
+            <a mat-flat-button routerLink="signin" color="accent">Acceder</a>
+        </div>
+    </mat-toolbar>
+</nav>
