@@ -18,7 +18,7 @@ export class SigninUserComponent implements OnInit {
     }
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
-  
+
   user: User = {
     password: '',
     email: '',

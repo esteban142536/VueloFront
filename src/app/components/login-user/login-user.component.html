@@ -1,39 +1,60 @@
-
 <div class="inicioSesion">
   <div class="contenido">
-
-    <img class="img" src="assets/img/logo.png" alt="...">
+    <img class="img" src="assets/img/logo.png" alt="..." />
 
     <div class="inicioSesion-datos">
       <mat-form-field appearance="fill">
         <mat-label>Correo electrónico</mat-label>
 
-        <input matInput [(ngModel)]="user.email" placeholder="usuario@example.com" [formControl]="email" required>
+        <input
+          matInput
+          [(ngModel)]="user.email"
+          placeholder="usuario@example.com"
+          [formControl]="email"
+          required
+        />
 
-        <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
       </mat-form-field>
     </div>
 
     <div class="inicioSesion-datos">
       <mat-form-field appearance="fill">
         <mat-label>Contraseña</mat-label>
-        <input matInput [type]="hide ? 'password' : 'text'">
-        <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Esconder contraseña'"
-          [attr.aria-pressed]="hide">
-          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        <input
+          matInput
+          [type]="hide ? 'password' : 'text'"
+          [(ngModel)]="user.password"
+        />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Esconder contraseña'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
         </button>
       </mat-form-field>
     </div>
 
-    <a mat-button href="/signin" color="primary">¿No tienes cuenta? Create uno</a>
+    <a mat-button href="/signin" color="primary"
+      >¿No tienes cuenta? Create uno</a
+    >
   </div>
-    <a class="buttom-inicio" mat-raised-button (click)="loginUser()" color="accent">Acceder</a>
-    <a class="buttom-inicio" mat-raised-button href="/home" color="accent">Cancelar</a>
-
-  
+  <a
+    class="buttom-inicio"
+    mat-raised-button
+    (click)="loginUser()"
+    color="accent"
+    >Acceder</a
+  >
+  <a class="buttom-inicio" mat-raised-button href="/home" color="accent"
+    >Cancelar</a
+  >
 </div>
 
-  <!--
+<!--
   <p>Email</p>
   <input [(ngModel)]="user.email" />
   <br />
@@ -41,4 +62,3 @@
   <input [(ngModel)]="user.password" />
   <button (click)="loginUser()" class="btn btn-success">Submit</button>
   -->
- 

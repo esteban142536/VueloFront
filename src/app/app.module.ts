@@ -40,7 +40,7 @@ import { CreateTiqueteComponent } from './components/create-tiquete/create-tique
 import { MatMenuModule} from '@angular/material/menu';
 import { ReactiveFormsModule} from '@angular/forms';
 import { CarouselSliderComponent } from './components/carousel-slider/carousel-slider.component';
-import { MatCarouselModule } from '@ngmodule/material-carousel';
+import { MatCarouselModule } from 'ng-mat-carousel';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldControl } from '@angular/material/form-field';
 import { MatInputModule} from '@angular/material/input'
@@ -74,9 +74,9 @@ import { MatNativeDateModule } from '@angular/material/core';
     CarouselSliderComponent,
   ],
   imports: [
-    AppRoutingModule, 
-    BrowserModule, FormsModule, 
-    HttpClientModule, 
+    AppRoutingModule,
+    BrowserModule, FormsModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,

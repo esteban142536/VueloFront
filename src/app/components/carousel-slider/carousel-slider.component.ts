@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
 
 @Component({
   selector: 'dreamOut-carousel-slider',
@@ -9,15 +8,15 @@ import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
 export class CarouselSliderComponent implements OnInit {
 
   slides = [
-    {'image': 
-      'assets/img/carrosel1.jpg'}, 
-    {'image': 
+    {'image':
+      'assets/img/carrosel1.jpg'},
+    {'image':
       'assets/img/carrosel2.jpg'},
-    {'image': 
-      'assets/img/carrosel3.jpeg'}, 
-    {'image': 
-      'assets/img/carrosel3.jpeg'}, 
-    {'image': 
+    {'image':
+      'assets/img/carrosel3.jpeg'},
+    {'image':
+      'assets/img/carrosel3.jpeg'},
+    {'image':
       'assets/img/carrosel3.jpeg'}
     ];
 

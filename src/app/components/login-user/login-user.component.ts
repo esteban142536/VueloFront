@@ -10,7 +10,7 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./login-user.component.css'],
 })
 export class LoginUserComponent implements OnInit {
-  
+
   email = new FormControl('', [Validators.required, Validators.email]);
 
   getErrorMessage() {
@@ -21,7 +21,7 @@ export class LoginUserComponent implements OnInit {
   }
 
   hide = true;
-  
+
   user: User = {
     email: '',
     password: '',
@@ -40,7 +40,7 @@ export class LoginUserComponent implements OnInit {
     this.userService.login(data).subscribe(
       (response) => {
         console.log(response._id);
-        this.router.navigate(['index']);
+        this.router.navigate(['home']);
       },
       (error) => {
         console.log('Error log in login user \n', error);

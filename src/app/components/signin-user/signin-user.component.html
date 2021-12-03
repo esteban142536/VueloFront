@@ -1,95 +1,128 @@
 <div class="signin">
+  <mat-card class="card-signin">
+    <mat-card-title-group>
+      <mat-card-title class="titulo">Usuario Dreamout</mat-card-title>
+      <mat-card-subtitle class="subtitulo"
+        >Crear nuevo usuario</mat-card-subtitle
+      >
+    </mat-card-title-group>
 
-    <mat-card class="card-signin">
+    <mat-divider></mat-divider>
 
-        <mat-card-title-group>
-            <mat-card-title class="titulo">Usuario Dreamout</mat-card-title>
-            <mat-card-subtitle class="subtitulo">Crear nuevo usuario</mat-card-subtitle>
-        </mat-card-title-group>
-
-        <mat-divider></mat-divider>
-
-        <mat-card-content>
-            <div class="info">
-                <div class="info-content">
-                    <div class="content">
-                        <div class="signin-datos">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Nombre</mat-label>
-                                <input matInput [(ngModel)]="user.nombre">
-                            </mat-form-field>
-                        </div>
-
-                        <div class="signin-datos">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Apellidos</mat-label>
-                                <input matInput [(ngModel)]="user.apellido">
-                            </mat-form-field>
-                        </div>
-
-                        <div class="signin-datos">
-                            <mat-form-field color="accent" appearance="fill">
-                                <mat-label>Fecha de nacimiento</mat-label>
-                                <input matInput [(ngModel)]="user.fecNacimient" [matDatepicker]="picker1">
-                                <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
-                                <mat-datepicker #picker1></mat-datepicker>
-                            </mat-form-field>
-                        </div>
-
-                        <div class="signin-datos">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Edad</mat-label>
-                                <input matInput [(ngModel)]="user.edad" type="number">
-                            </mat-form-field>
-                        </div>
-                    </div>
-
-                    <div class="content">
-                        <div class="signin-datos">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Correo electrónico</mat-label>
-                                <input matInput [(ngModel)]="user.email" placeholder="usuario@example.com"
-                                    [formControl]="email" required>
-                                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
-                            </mat-form-field>
-                        </div>
-
-                        <div class="signin-datos">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Contraseña</mat-label>
-                                <input matInput [type]="hide ? 'password' : 'text'">
-                                <button mat-icon-button matSuffix (click)="hide = !hide"
-                                    [attr.aria-label]="'Esconder contraseña'" [attr.aria-pressed]="hide">
-                                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                                </button>
-                            </mat-form-field>
-                        </div>
-
-                        <div class="signin-datos">
-                            <mat-form-field class="example-full-width" appearance="fill">
-                                <mat-label>Número celular</mat-label>
-                                <span matPrefix>+506 &nbsp;</span>
-                                <input matInput [(ngModel)]="user.telefono" placeholder="1234-5678">
-                                <mat-icon matSuffix>phone</mat-icon>
-                            </mat-form-field>
-                        </div>
-
-                        <div class="signin-datos">
-                            <mat-form-field appearance="fill">
-                                <mat-label>Dirección</mat-label>
-                                <textarea matInput [(ngModel)]="user.direccion"></textarea>
-                            </mat-form-field>
-                        </div>
-                    </div>
-                </div>
+    <mat-card-content>
+      <div class="info">
+        <div class="info-content">
+          <div class="content">
+            <div class="signin-datos">
+              <mat-form-field appearance="fill">
+                <mat-label>Nombre</mat-label>
+                <input matInput [(ngModel)]="user.nombre" />
+              </mat-form-field>
             </div>
-            <a class="buttom" mat-raised-button (click)="saveUser()" color="accent">Crear</a>
-            <a class="buttom" mat-raised-button href="/home" color="accent">Cancelar</a>
-        </mat-card-content>
-    </mat-card>
+
+            <div class="signin-datos">
+              <mat-form-field appearance="fill">
+                <mat-label>Apellidos</mat-label>
+                <input matInput [(ngModel)]="user.apellido" />
+              </mat-form-field>
+            </div>
+
+            <div class="signin-datos">
+              <mat-form-field color="accent" appearance="fill">
+                <mat-label>Fecha de nacimiento</mat-label>
+                <input
+                  matInput
+                  [(ngModel)]="user.fecNacimient"
+                  [matDatepicker]="picker1"
+                />
+                <mat-datepicker-toggle
+                  matSuffix
+                  [for]="picker1"
+                ></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field>
+            </div>
+
+            <div class="signin-datos">
+              <mat-form-field appearance="fill">
+                <mat-label>Edad</mat-label>
+                <input matInput [(ngModel)]="user.edad" type="number" />
+              </mat-form-field>
+            </div>
+          </div>
+
+          <div class="content">
+            <div class="signin-datos">
+              <mat-form-field appearance="fill">
+                <mat-label>Correo electrónico</mat-label>
+                <input
+                  matInput
+                  [(ngModel)]="user.email"
+                  placeholder="usuario@example.com"
+                  [formControl]="email"
+                  required
+                />
+                <mat-error *ngIf="email.invalid">{{
+                  getErrorMessage()
+                }}</mat-error>
+              </mat-form-field>
+            </div>
+
+            <div class="signin-datos">
+              <mat-form-field appearance="fill">
+                <mat-label>Contraseña</mat-label>
+                <input
+                  matInput
+                  [type]="hide ? 'password' : 'text'"
+                  [(ngModel)]="user.password"
+                />
+                <button
+                  mat-icon-button
+                  matSuffix
+                  (click)="hide = !hide"
+                  [attr.aria-label]="'Esconder contraseña'"
+                  [attr.aria-pressed]="hide"
+                >
+                  <mat-icon>{{
+                    hide ? "visibility_off" : "visibility"
+                  }}</mat-icon>
+                </button>
+              </mat-form-field>
+            </div>
+
+            <div class="signin-datos">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Número celular</mat-label>
+                <span matPrefix>+506 &nbsp;</span>
+                <input
+                  matInput
+                  [(ngModel)]="user.telefono"
+                  placeholder="1234-5678"
+                />
+                <mat-icon matSuffix>phone</mat-icon>
+              </mat-form-field>
+            </div>
+
+            <div class="signin-datos">
+              <mat-form-field appearance="fill">
+                <mat-label>Dirección</mat-label>
+                <textarea matInput [(ngModel)]="user.direccion"></textarea>
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="buttom" mat-raised-button (click)="saveUser()" color="accent"
+        >Crear</a
+      >
+      <a class="buttom" mat-raised-button href="/home" color="accent"
+        >Cancelar</a
+      >
+    </mat-card-content>
+  </mat-card>
 </div>
 
-    <!--
+<!--
     <br/>
     <p>Email</p>
     <input [(ngModel)]="user.email">
