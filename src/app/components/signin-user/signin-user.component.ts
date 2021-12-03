@@ -9,7 +9,7 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['./signin-user.component.css'],
 })
 export class SigninUserComponent implements OnInit {
-
+  hide = true;
   email = new FormControl('', [Validators.required, Validators.email]);
 
   getErrorMessage() {
@@ -18,7 +18,7 @@ export class SigninUserComponent implements OnInit {
     }
     return this.email.hasError('email') ? 'Not a valid email' : '';
   }
-
+  
   user: User = {
     password: '',
     email: '',

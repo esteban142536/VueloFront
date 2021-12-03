@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/models/user.model';
 import { UserService } from 'src/app/services/user.service';
+import {FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-login-user',
@@ -9,6 +10,18 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./login-user.component.css'],
 })
 export class LoginUserComponent implements OnInit {
+  
+  email = new FormControl('', [Validators.required, Validators.email]);
+
+  getErrorMessage() {
+    if (this.email.hasError('required')) {
+      return 'You must enter a value';
+    }
+    return this.email.hasError('email') ? 'Not a valid email' : '';
+  }
+
+  hide = true;
+  
   user: User = {
     email: '',
     password: '',

@@ -22,9 +22,10 @@ import { TiqueteComponent } from './components/tiquete/tiquete.component';
 import { HistoriaComponent } from './components/historia/historia.component';
 import { ReporteComponent } from './components/reporte/reporte.component';
 import { ContactenosComponent } from './components/contactenos/contactenos.component';
-import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 //Angular material
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -41,6 +42,11 @@ import { ReactiveFormsModule} from '@angular/forms';
 import { CarouselSliderComponent } from './components/carousel-slider/carousel-slider.component';
 import { MatCarouselModule } from '@ngmodule/material-carousel';
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldControl } from '@angular/material/form-field';
+import { MatInputModule} from '@angular/material/input'
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule} from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -82,7 +88,11 @@ import { MatCardModule } from '@angular/material/card';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatCarouselModule.forRoot(),
-    MatCardModule,],
+    MatCardModule,
+    MatSelectModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule],
   providers: [],
   bootstrap: [AppComponent],
 })

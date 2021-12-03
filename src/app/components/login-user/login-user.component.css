@@ -1,3 +1,32 @@
-*{
-    background-color: beige;
+
+.inicioSesion{
+  max-width: 500px;
+  -webkit-box-shadow: 1px 18px 27px 4px rgba(31, 31, 31, 0.68);
+  -moz-box-shadow: 1px 18px 27px 4px rgba(31, 31, 31, 0.68);
+  box-shadow: 1px 18px 27px 4px rgba(122, 122, 122, 0.68);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 130px;
+  margin-bottom: 140px;
+  padding-bottom: 60px;
+  padding-top: 50px;
+}
+
+.contenido .mat-form-field {
+  width: 300px;
+}
+
+.buttom-inicio{
+  margin: 0 auto;
+  margin-right: 15px;
+  margin-top: 40px;
+}
+
+div {
+  text-align: center;
+}
+
+img{
+  width: 350px;
+  margin-bottom: 40px;
 }
