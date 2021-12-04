@@ -1,1 +1,15 @@
 <p>create-tiquete works!</p>
+
+<div>
+  <br />
+  <p>ID_Avion</p>
+  <input [(ngModel)]="tiquete.ID_Avion" />
+  <br />
+  <p>destino</p>
+  <input [(ngModel)]="tiquete.codigo_Fila" />
+  <br />
+  <p>duracion</p>
+  <input [(ngModel)]="tiquete.codigo_Columna" />
+  <br />
+  <button (click)="createTiquete()" class="btn btn-success">Submit</button>
+</div>
