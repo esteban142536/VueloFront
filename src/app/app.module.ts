@@ -13,13 +13,13 @@ import { LoginUserComponent } from './components/login-user/login-user.component
 import { UserIndexComponent } from './components/user-index/user-index.component';
 import { MantenimientoUsuarioComponent } from './components/mantenimiento-usuario/mantenimiento-usuario.component';
 
-import { AddTipoAvionComponent } from './components/add-tipo-avion/add-tipo-avion.component';
+import { AddTipoAvionComponent } from './components/mantenimiento-avion/add-tipo-avion/add-tipo-avion.component';
 import { EditarVueloComponent } from './components/editar-vuelo/editar-vuelo.component';
 import { EditarTipoAvionComponent } from './components/editar-tipo-avion/editar-tipo-avion.component';
 import { MantenimientoAvionComponent } from './components/mantenimiento-avion/mantenimiento-avion.component';
 
 import { TiqueteComponent } from './components/tiquete/tiquete.component';
-import { CreateTiqueteComponent } from './components/create-tiquete/create-tiquete.component';
+import { CreateTiqueteComponent } from './components/mantenimiento-tiquete/create-tiquete/create-tiquete.component';
 import { EditarTiqueteComponent } from './components/editar-tiquete/editar-tiquete.component';
 import { MantenimientoTiqueteComponent } from './components/mantenimiento-tiquete/mantenimiento-tiquete.component';
 
@@ -63,7 +63,8 @@ import { MatTooltipModule} from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DashborahComponent } from './components/dashborah/dashborah.component';
-
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatListModule} from '@angular/material/list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -118,7 +119,9 @@ import { DashborahComponent } from './components/dashborah/dashborah.component';
     MatTooltipModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSnackBarModule],
+    MatSnackBarModule,
+    MatTabsModule,
+    MatListModule],
   providers: [],
   bootstrap: [AppComponent],
 })

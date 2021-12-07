@@ -32,17 +32,17 @@ export class CrearfacturaComponent implements OnInit {
       ID_Tiquete: ['', Validators.required],
       ID_Usuario: ['', Validators.required],
       fecha: ['', Validators.required],
+      IVA: ['', Validators.required],
       Total: ['', Validators.required]
     });
   }
 
   ngOnInit(): void {
 
-    //Cuando se inicializa el compomente de consulta si el ID
-    //fue enviado por parametro
+    //Cuando se inicializa el compomente de consulta si el ID fue enviado por parametro
     this.activeRouter.params.subscribe((params: Params) => {      
       console.log(params);
-      this.idFactura = params['id'];
+      this.idFactura = params['_id'];
 
       //se consultan los datos de la factura 
       if(this.idFactura !== undefined){
@@ -59,6 +59,7 @@ export class CrearfacturaComponent implements OnInit {
                                   ID_Tiquete: this.factura.ID_Tiquete, 
                                   ID_Usuario: this.factura.ID_Usuario, 
                                   fecha: this.factura.fecha,
+                                  IVA: this.factura.IVA,
                                   Total: this.factura.Total});
 
               console.log(this.factura);
@@ -71,7 +72,7 @@ export class CrearfacturaComponent implements OnInit {
             },
             error: (e:any) => console.error(e)
         });
-        console.log('id factura' + this.idFactura);
+        console.log('_id factura' + this.idFactura);
       }
     });
   }
@@ -83,6 +84,7 @@ export class CrearfacturaComponent implements OnInit {
       ID_Tiquete: this.form.value.ID_Tiquete,
       ID_Usuario: this.form.value.ID_Usuario,
       fecha: this.form.value.fecha,
+      IVA: this.form.value.IVA,
       Total: this.form.value.Total
     };
 
@@ -93,7 +95,7 @@ export class CrearfacturaComponent implements OnInit {
         next: (res: any) => {
           this.form.reset;
           console.log(res);
-          this.router.navigateByUrl('/dashboard/facturas');
+          this.router.navigateByUrl('/dashboard/mantenimientoFactura');
 
           this._snackbar.open('La factura fue modificada con exito, por favor verificar', '',{
             duration: 5000,
@@ -113,6 +115,7 @@ export class CrearfacturaComponent implements OnInit {
       ID_Tiquete: this.form.value.ID_Tiquete,
       ID_Usuario: this.form.value.ID_Usuario,
       fecha: this.form.value.fecha,
+      IVA: this.form.value.IVA,
       Total: this.form.value.Total
     };
 
@@ -123,7 +126,7 @@ export class CrearfacturaComponent implements OnInit {
         next: (res: any) => {
           this.form.reset;
           console.log(res);
-          this.router.navigateByUrl('/dashboard/facturas');
+          this.router.navigateByUrl('/dashboard/mantenimientoFactura');
 
           this._snackbar.open('La factura fue agregada con exito, por favor verificar', '',{
             duration: 5000,

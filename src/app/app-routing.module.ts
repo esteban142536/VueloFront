@@ -16,11 +16,11 @@ import { MantenimientoUsuarioComponent } from './components/mantenimiento-usuari
 import { EditarRutaComponent } from './components/editar-ruta/editar-ruta.component';
 import { EditarVueloComponent } from './components/editar-vuelo/editar-vuelo.component';
 import { EditarTipoAvionComponent } from './components/editar-tipo-avion/editar-tipo-avion.component';
-import { AddTipoAvionComponent } from './components/add-tipo-avion/add-tipo-avion.component';
+import { AddTipoAvionComponent } from './components/mantenimiento-avion/add-tipo-avion/add-tipo-avion.component';
 import { FindRutaIDComponent } from './components/find-ruta-id/find-ruta-id.component';
 import { CreateRutaComponent } from './components/create-ruta/create-ruta.component';
 import { CreateVueloComponent } from './components/create-vuelo/create-vuelo.component';
-import { CreateTiqueteComponent } from './components/create-tiquete/create-tiquete.component';
+import { CreateTiqueteComponent } from './components/mantenimiento-tiquete/create-tiquete/create-tiquete.component';
 
 import { MantenimientoFacturaComponent } from './components/mantenimiento-factura/mantenimiento-factura.component';
 

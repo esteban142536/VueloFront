@@ -61,7 +61,7 @@ export class MantenimientoFacturaComponent implements OnInit {
 
   eliminarFactura(element:any){
     swal.fire({
-      title: `¿Desea eliminar la factura #${element.numFactura} la a nombre de ${element.nomCliente}?`,
+      title: `¿Desea eliminar la factura #${element._id} la a nombre de ${element.ID_Usuario}?`,
       icon: 'question',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
@@ -93,7 +93,7 @@ export class MantenimientoFacturaComponent implements OnInit {
 
   modificarFactura(element:any){
     swal.fire({
-      title: `¿Desea modificar la factura #${element.numFactura} la a nombre de ${element.nomCliente}?`,
+      title: `¿Desea modificar la factura #${element._id} la a nombre de ${element.ID_Usuario}?`,
       icon: 'question',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',

@@ -1,47 +1,120 @@
-<div class="container">
+<div class="crearFactura">
+  <div class="container">
     <mat-toolbar>
-      <span>{{textPantalla}}</span>
+      <span>{{ textPantalla }}</span>
     </mat-toolbar>
+  </div>
+  <div class="contenido">
+    <mat-card style="margin-top: 10px" style="text-align: left">
+      <form [formGroup]="form">
+        <mat-form-field>
+          <mat-label>Número de factura</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="10"
+            placeholder="1235"
+            autocomplete="off"
+            formControlName="_id"
+          />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <mat-label>Número de tiquete</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="100"
+            placeholder="6589"
+            autocomplete="off"
+            formControlName="ID_Tiquete"
+          />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <mat-label>Cédula del usuario</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="200"
+            placeholder="Cédula"
+            autocomplete="off"
+            formControlName="ID_Usuario"
+          />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <mat-label>Fecha</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="10"
+            placeholder="12/20/2000"
+            autocomplete="off"
+            formControlName="fecha"
+          />
+        </mat-form-field>
 
-</div>
-<div class="contenido">
-    <mat-card style="margin-top: 10px;" style="text-align: left;">
-        <form [formGroup]="form">
-            <mat-form-field >
-                <mat-label>Número de factura</mat-label>
-                <input matInput #input maxlength="10" placeholder="9999" autocomplete="off" formControlName="_id">
-            </mat-form-field>
-            <br>
-            <mat-form-field >
-                <mat-label>Número de tiquete</mat-label>
-                <input matInput #input maxlength="100" placeholder="9999" autocomplete="off" formControlName="ID_Tiquete" >
-            </mat-form-field>
-            <br>
-            <mat-form-field >
-                <mat-label>Cédula del usuario</mat-label>
-                <input matInput #input maxlength="200" placeholder="Cédula" autocomplete="off"  formControlName="ID_Usuario" >
-            </mat-form-field>
-            <br>
-            <mat-form-field  >
-                <mat-label>Fecha</mat-label>
-                <input matInput #input maxlength="8"  placeholder="12/20/2000" autocomplete="off" formControlName="fecha">
-            </mat-form-field>
+        <br />
+        <mat-form-field>
+          <mat-label>IVA</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="100"
+            placeholder="3000"
+            autocomplete="off"
+            formControlName="IVA"
+          />
+        </mat-form-field>
 
-            <br>
-            <mat-form-field >
-                <mat-label>Total</mat-label>
-                <input matInput #input maxlength="100" placeholder="9999" autocomplete="off" formControlName="Total" >
-            </mat-form-field>
-               
-            <br><br>
-            <button mat-raised-button color="warn" routerLink="/dashboard/facturas" routerLinkActive="router-link-active" >Regresar</button>
-            <span *ngIf="isInsertar">
-                <button style="margin-left: 20px;" mat-raised-button color="primary" type="submit" [disabled] = "form.invalid" (click)="saveFactura()">Guardar factura</button>
-            </span>
-            <span *ngIf="!isInsertar">
-                <button style="margin-left: 20px;" mat-raised-button color="primary" type="submit" [disabled] = "form.invalid" (click)="modificarFactura()">Modificar factura</button>
-            </span>
-            
-        </form>
+        <br />
+        <mat-form-field>
+          <mat-label>Total</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="100"
+            placeholder="9999"
+            autocomplete="off"
+            formControlName="Total"
+          />
+        </mat-form-field>
+
+        <br /><br />
+        <button
+          mat-raised-button
+          color="accent"
+          routerLink="/mantenimientoFactura"
+          routerLinkActive="router-link-active"
+        >
+          Regresar
+        </button>
+        <span *ngIf="isInsertar">
+          <button
+            style="margin-left: 20px"
+            mat-raised-button
+            color="accent"
+            type="submit"
+            [disabled]="form.invalid"
+            (click)="saveFactura()"
+          >
+            Guardar factura
+          </button>
+        </span>
+        <span *ngIf="!isInsertar">
+          <button
+            style="margin-left: 20px"
+            mat-raised-button
+            color="accent"
+            type="submit"
+            [disabled]="form.invalid"
+            (click)="modificarFactura()"
+          >
+            Modificar factura
+          </button>
+        </span>
+      </form>
     </mat-card>
+  </div>
 </div>
