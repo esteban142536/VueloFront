@@ -23,6 +23,7 @@ export class CreateTiqueteComponent implements OnInit {
       ID_Avion: this.tiquete.ID_Avion,
       codigo_Fila: this.tiquete.codigo_Fila,
       codigo_Columna: this.tiquete.codigo_Columna,
+      _id:null
     };
 
     this.TiqueteService.create(data).subscribe(

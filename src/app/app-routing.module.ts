@@ -20,13 +20,14 @@ import { AddTipoAvionComponent } from './components/add-tipo-avion/add-tipo-avio
 import { FindRutaIDComponent } from './components/find-ruta-id/find-ruta-id.component';
 import { CreateRutaComponent } from './components/create-ruta/create-ruta.component';
 import { CreateVueloComponent } from './components/create-vuelo/create-vuelo.component';
+import { CreateTiqueteComponent } from './components/create-tiquete/create-tiquete.component';
 
 import { MantenimientoFacturaComponent } from './components/mantenimiento-factura/mantenimiento-factura.component';
 
 import { CrearfacturaComponent } from './components/mantenimiento-factura/crear-factura/crearfactura.component';
 
 const routes: Routes = [
-  { path: '',   redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'tiquete', component: TiqueteComponent },
   { path: 'signin', component: SigninUserComponent },
@@ -35,6 +36,7 @@ const routes: Routes = [
   { path: 'findRuta', component: FindRutaIDComponent },
   { path: 'createRuta', component: CreateRutaComponent },
   { path: 'createVuelo', component: CreateVueloComponent },
+  { path: 'createTiquete', component: CreateTiqueteComponent },
   { path: 'acercaDe', component: AcercaDeComponent },
   { path: 'editarRuta', component: EditarRutaComponent },
   { path: 'editarVuelo', component: EditarVueloComponent },
