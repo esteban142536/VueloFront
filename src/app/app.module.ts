@@ -13,7 +13,7 @@ import { LoginUserComponent } from './components/login-user/login-user.component
 import { UserIndexComponent } from './components/user-index/user-index.component';
 import { MantenimientoUsuarioComponent } from './components/mantenimiento-usuario/mantenimiento-usuario.component';
 
-import { AddTipoAvionComponent } from './components/mantenimiento-avion/add-tipo-avion/add-tipo-avion.component';
+import { AddTipoAvionComponent } from './components/add-tipo-avion/add-tipo-avion.component';
 import { EditarVueloComponent } from './components/editar-vuelo/editar-vuelo.component';
 import { EditarTipoAvionComponent } from './components/editar-tipo-avion/editar-tipo-avion.component';
 import { MantenimientoAvionComponent } from './components/mantenimiento-avion/mantenimiento-avion.component';
@@ -65,6 +65,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DashborahComponent } from './components/dashborah/dashborah.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatListModule} from '@angular/material/list';
+import { CrearAvionComponent } from './components/mantenimiento-avion/crear-avion/crear-avion.component';
+import { CrearUsuarioComponent } from './components/mantenimiento-usuario/crear-usuario/crear-usuario.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -95,6 +97,8 @@ import {MatListModule} from '@angular/material/list';
     CrearfacturaComponent,
     DashborahComponent,
     ReportesComponent,
+    CrearAvionComponent,
+    CrearUsuarioComponent,
   ],
   imports: [
     AppRoutingModule,

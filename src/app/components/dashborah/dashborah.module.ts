@@ -5,6 +5,7 @@ import { DashboradRoutingModule } from './dashborad-routing.module';
 import { DashborahComponent } from './dashborah.component';
 import { SharedModule } from '../shared/shared.module';
 
+import { MantenimientoAvionComponent } from '../mantenimiento-avion/mantenimiento-avion.component';
 import { MantenimientoFacturaComponent } from '../mantenimiento-factura/mantenimiento-factura.component';
 import { HomeComponent } from '../home/home.component';
 import { NavbarComponent } from '../navbar/navbar.component';
@@ -17,7 +18,8 @@ import { ReportesComponent } from 'src/app/components/reportes/reportes.componen
     HomeComponent,
     NavbarComponent,
     MantenimientoFacturaComponent,
-    ReportesComponent
+    ReportesComponent,
+    MantenimientoAvionComponent,
   ],
   imports: [
     CommonModule,

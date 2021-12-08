@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { tipoAvion } from '../../../models/tipoAvion.model';
+import { tipoAvion } from '../../models/tipoAvion.model';
 import { tipoAvionServise } from 'src/app/services/tipoAvion.service';
 
 @Component({

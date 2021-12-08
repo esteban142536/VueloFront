@@ -1,10 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CrearfacturaComponent } from '../mantenimiento-factura/crear-factura/crearfactura.component';
-import { MantenimientoFacturaComponent } from '../mantenimiento-factura/mantenimiento-factura.component';
 import { HomeComponent } from '../home/home.component';
 import { ReportesComponent } from 'src/app/components/reportes/reportes.component';
 import { DashborahComponent } from './dashborah.component';
+
+import { CrearAvionComponent } from '../mantenimiento-avion/crear-avion/crear-avion.component';
+import { MantenimientoAvionComponent } from '../mantenimiento-avion/mantenimiento-avion.component';
+import { CrearfacturaComponent } from '../mantenimiento-factura/crear-factura/crearfactura.component';
+import { MantenimientoFacturaComponent } from '../mantenimiento-factura/mantenimiento-factura.component';
 
 const routes: Routes = [
   { 
@@ -13,7 +16,11 @@ const routes: Routes = [
     { path: 'facturas', component: MantenimientoFacturaComponent },
     { path: 'reportes', component: ReportesComponent },
     { path: 'detalleFactura', component: CrearfacturaComponent },
-    { path: 'detalleFactura/:id', component: CrearfacturaComponent }
+    { path: 'detalleFactura/:id', component: CrearfacturaComponent },
+
+    { path: 'mantenimientoAvion', component: MantenimientoAvionComponent },
+    { path: 'detalleAvion', component: CrearAvionComponent },
+    { path: 'detalleAvion/:id', component: CrearAvionComponent }
   ]
 }  
 

@@ -41,14 +41,14 @@ export class EditarTipoAvionComponent implements OnInit {
       nombre: this.tipoAvionNuevo.nombre || this.tipoAvionViejo.nombre,
     };
 
-    this.tipoAvionServise.update(data).subscribe(
-      (response) => {
-        console.log(response);
-      },
-      (error) => {
-        console.log('Error en actualizar tipo avion \n', error);
-        return;
-      }
-    );
+    //this.tipoAvionServise.update(data).subscribe(
+      //(response) => {
+        //console.log(response);
+      //},
+      //(error) => {
+        //console.log('Error en actualizar tipo avion \n', error);
+        //return;
+      //}
+    //);
   }
 }
