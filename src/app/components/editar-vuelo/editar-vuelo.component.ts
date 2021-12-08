@@ -41,13 +41,13 @@ export class EditarVueloComponent implements OnInit {
       numeroVuelo: this.vueloNuevo.numeroVuelo || this.vueloViejo.numeroVuelo,
     };
 
-    this.vueloServise.update(data).subscribe(
-      (response) => {
-        console.log(response);
-      },
-      (error) => {
-        console.log('Error en actualizar vuelo \n', error);
-      }
-    );
+    //this.vueloServise.update(data).subscribe(
+      //(response) => {
+        //console.log(response);
+      //},
+      //(error) => {
+        //console.log('Error en actualizar vuelo \n', error);
+      //}
+    //);
   }
 }

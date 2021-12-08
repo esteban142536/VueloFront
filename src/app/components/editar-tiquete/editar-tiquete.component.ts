@@ -40,14 +40,14 @@ export class EditarTiqueteComponent implements OnInit {
         this.tiqueteNuevo.codigo_Columna || this.tiqueteViejo.codigo_Columna,
     };
 
-    this.TiqueteService.update(data).subscribe(
-      (response) => {
-        console.log(response);
-      },
-      (error) => {
-        console.log('Error en actualizar el tiquete \n', error);
-        return;
-      }
-    );
+    //this.TiqueteService.update(data).subscribe(
+      //(response) => {
+        //console.log(response);
+      //},
+      //(error) => {
+        //console.log('Error en actualizar el tiquete \n', error);
+        //return;
+      //}
+    //);
   }
 }

@@ -5,7 +5,7 @@ export class User {
   tipoUsuario?: String;
   password?: String;
   email?: String;
-  fecNacimient?: Date;
+  fecNacimiento?: Date;
   edad?: Number;
   direccion?: String;
   telefono?: Number;

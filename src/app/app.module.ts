@@ -54,7 +54,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatMenuModule} from '@angular/material/menu';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule} from '@angular/material/table';
 
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { ReactiveFormsModule} from '@angular/forms';
@@ -66,7 +66,7 @@ import { DashborahComponent } from './components/dashborah/dashborah.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatListModule} from '@angular/material/list';
 import { CrearAvionComponent } from './components/mantenimiento-avion/crear-avion/crear-avion.component';
-import { CrearUsuarioComponent } from './components/mantenimiento-usuario/crear-usuario/crear-usuario.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,7 +98,6 @@ import { CrearUsuarioComponent } from './components/mantenimiento-usuario/crear-
     DashborahComponent,
     ReportesComponent,
     CrearAvionComponent,
-    CrearUsuarioComponent,
   ],
   imports: [
     AppRoutingModule,

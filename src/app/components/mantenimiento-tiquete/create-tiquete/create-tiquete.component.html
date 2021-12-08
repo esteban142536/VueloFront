@@ -1,4 +1,126 @@
-<p>create-tiquete works!</p>
+
+<div class="crearTiquete">
+  <div class="container">
+    <mat-toolbar>
+      <span>{{ textPantalla }}</span>
+    </mat-toolbar>
+  </div>
+  <div class="contenido">
+    <mat-card style="margin-top: 10px" style="text-align: left">
+      <form [formGroup]="form">
+        <br />
+        <mat-form-field>
+          <mat-label>Número de tiquete</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="100"
+            placeholder="6589"
+            autocomplete="off"
+            formControlName="_id"
+          />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <mat-label>Marca</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="200"
+            placeholder="CopeAirline"
+            autocomplete="off"
+            formControlName="marca"
+          />
+        </mat-form-field>
+        <br/>
+        <mat-form-field>
+          <mat-label>Tipo de vuelo</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="200"
+            placeholder="1256"
+            autocomplete="off"
+            formControlName="ID_TipoAvion"
+          />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <mat-label>Número de vuelo</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="200"
+            placeholder="1256"
+            autocomplete="off"
+            formControlName="numeroVuelo"
+          />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <mat-label>Fecha de ida</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="10"
+            placeholder="12/20/2000"
+            autocomplete="off"
+            formControlName="fechaIda"
+          />
+        </mat-form-field>
+
+        <br />
+        <mat-form-field>
+          <mat-label>ID_Ruta</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="100"
+            placeholder="3000"
+            autocomplete="off"
+            formControlName="ID_Ruta"
+          />
+        </mat-form-field>
+
+        <br /><br />
+        <button
+          mat-raised-button
+          color="accent"
+          routerLink="/mantenimientoTiquete"
+          routerLinkActive="router-link-active"
+        >
+          Regresar
+        </button>
+        <span *ngIf="isInsertar">
+          <button
+            style="margin-left: 20px"
+            mat-raised-button
+            color="accent"
+            type="submit"
+            [disabled]="form.invalid"
+            (click)="saveVuelo()"
+          >
+            Guardar factura
+          </button>
+        </span>
+        <span *ngIf="!isInsertar">
+          <button
+            style="margin-left: 20px"
+            mat-raised-button
+            color="accent"
+            type="submit"
+            [disabled]="form.invalid"
+            (click)="modificarVuelo()"
+          >
+            Modificar factura
+          </button>
+        </span>
+      </form>
+    </mat-card>
+  </div>
+</div>
+
+<!--<p>create-tiquete works!</p>
 
 <div>
   <br />
@@ -13,3 +135,4 @@
   <br />
   <button (click)="createTiquete()" class="btn btn-success">Submit</button>
 </div>
+-->

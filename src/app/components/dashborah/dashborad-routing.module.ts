@@ -8,7 +8,8 @@ import { CrearAvionComponent } from '../mantenimiento-avion/crear-avion/crear-av
 import { MantenimientoAvionComponent } from '../mantenimiento-avion/mantenimiento-avion.component';
 import { CrearfacturaComponent } from '../mantenimiento-factura/crear-factura/crearfactura.component';
 import { MantenimientoFacturaComponent } from '../mantenimiento-factura/mantenimiento-factura.component';
-
+import { MantenimientoTiqueteComponent } from '../mantenimiento-tiquete/mantenimiento-tiquete.component';
+import { CreateTiqueteComponent } from '../mantenimiento-tiquete/create-tiquete/create-tiquete.component';
 const routes: Routes = [
   { 
     path: '', component: DashborahComponent, children: [
@@ -20,7 +21,11 @@ const routes: Routes = [
 
     { path: 'mantenimientoAvion', component: MantenimientoAvionComponent },
     { path: 'detalleAvion', component: CrearAvionComponent },
-    { path: 'detalleAvion/:id', component: CrearAvionComponent }
+    { path: 'detalleAvion/:id', component: CrearAvionComponent },
+
+    { path: 'mantenimientoTiqueteComponent', component: MantenimientoTiqueteComponent },
+    { path: 'detalleTiquete', component: CreateTiqueteComponent },
+    { path: 'detalleTiquete/:id', component: CreateTiqueteComponent }
   ]
 }  
 
