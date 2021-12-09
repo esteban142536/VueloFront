@@ -9,10 +9,10 @@ import { tipoAvion } from 'src/app/models/tipoAvion.model';
 @Component({
   selector: 'dreamOut-crear-avion',
   templateUrl: './crear-avion.component.html',
-  styleUrls: ['./crear-avion.component.css']
+  styleUrls: ['./crear-avion.component.css'],
 })
 export class CrearAvionComponent implements OnInit {
-//Atributos del compomente
+  //Atributos del compomente
   idAvion: number = 0;
   textPantalla: string = 'Crear avión';
   isInsertar: boolean = true;
@@ -28,7 +28,6 @@ export class CrearAvionComponent implements OnInit {
     private activeRouter: ActivatedRoute
   ) {
     this.form = this.fb.group({
-      _id: ['', Validators.required],
       nombre: ['', Validators.required],
       cantidadFila: ['', Validators.required],
       cantidadAsientos: ['', Validators.required],
@@ -110,19 +109,19 @@ export class CrearAvionComponent implements OnInit {
   //Método para guardar una nuevo avion
   saveAvion(): void {
     const data = {
-      _id: this.form.value._id,
+      _id: null,
       nombre: this.form.value.nombre,
       cantidadFila: this.form.value.cantidadFila,
       cantidadAsientos: this.form.value.cantidadAsientos,
     };
 
-    console.log('data in save factura',data);
+    console.log('data in save factura', data);
 
     this.tipoAvionServise.create(data).subscribe({
       next: (res: any) => {
         this.form.reset;
         console.log(res);
-        this.router.navigateByUrl('/dashboard/mantenimientoAvion');
+        this.router.navigateByUrl('/mantenimientoAvion');
 
         this._snackbar.open(
           'El avión fue agregada con exito, por favor verificar',

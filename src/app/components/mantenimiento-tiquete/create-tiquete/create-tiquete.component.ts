@@ -28,7 +28,6 @@ export class CreateTiqueteComponent implements OnInit {
     private activeRouter: ActivatedRoute
   ) {
     this.form = this.fb.group({
-      _id: ['', Validators.required],
       numeroVuelo: ['', Validators.required],
       fechaIda: ['', Validators.required],
       ID_TipoAvion: ['', Validators.required],
@@ -116,7 +115,7 @@ export class CreateTiqueteComponent implements OnInit {
   //Método para guardar un nueva vuelo
   saveVuelo(): void {
     const data = {
-      _id: this.vuelo._id,
+      _id: null,
       numeroVuelo: this.vuelo.numeroVuelo,
       fechaIda: this.vuelo.fechaIda,
       ID_TipoAvion: this.vuelo.ID_TipoAvion,

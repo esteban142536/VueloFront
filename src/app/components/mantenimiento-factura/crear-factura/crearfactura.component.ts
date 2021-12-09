@@ -122,13 +122,13 @@ export class CrearfacturaComponent implements OnInit {
       Total: this.form.value.Total,
     };
 
-    console.log('data in save factura',data);
+    console.log('data in save factura', data);
 
     this.facturaService.create(data).subscribe({
       next: (res: any) => {
         this.form.reset;
         console.log(res);
-        //this.router.navigateByUrl('/dashboard/mantenimientoFactura'); nesecita una ruta que exista en este proyecto
+        this.router.navigateByUrl('/mantenimientoFactura');
 
         this._snackbar.open(
           'La factura fue agregada con exito, por favor verificar',

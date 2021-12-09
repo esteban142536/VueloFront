@@ -1,96 +1,83 @@
 <div class="crearAvion">
-    <div class="container">
-      <mat-toolbar>
-        <span>{{ textPantalla }}</span>
-      </mat-toolbar>
-    </div>
-    <div class="contenido">
-      <mat-card style="margin-top: 10px" style="text-align: left">
-        <form [formGroup]="form">
-          <br />
-          <mat-form-field>
-            <mat-label>Número de avión</mat-label>
-            <input
-              matInput
-              #input
-              maxlength="100"
-              placeholder="6589"
-              autocomplete="off"
-              formControlName="_id"
-            />
-          </mat-form-field>
-          <br />
-          <mat-form-field>
-            <mat-label>Nombre</mat-label>
-            <input
-              matInput
-              #input
-              maxlength="200"
-              placeholder="Celin"
-              autocomplete="off"
-              formControlName="nombre"
-            />
-          </mat-form-field>
-          <br />
-          <mat-form-field>
-            <mat-label>Cant.Fila</mat-label>
-            <input
-              matInput
-              #input
-              maxlength="200"
-              placeholder="Celin"
-              autocomplete="off"
-              formControlName="cantidadFila"
-            />
-          </mat-form-field>
-  
-          <br />
-          <mat-form-field>
-            <mat-label>Cant.Asientos</mat-label>
-            <input
-              matInput
-              #input
-              maxlength="100"
-              placeholder="3000"
-              autocomplete="off"
-              formControlName="cantidadAsientos"
-            />
-          </mat-form-field>
-          <br/>
+  <div class="container">
+    <mat-toolbar>
+      <span>{{ textPantalla }}</span>
+    </mat-toolbar>
+  </div>
+  <div class="contenido">
+    <mat-card style="margin-top: 10px" style="text-align: left">
+      <form [formGroup]="form">
+        <br />
+        <mat-form-field>
+          <mat-label>Nombre</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="200"
+            placeholder="Celin"
+            autocomplete="off"
+            formControlName="nombre"
+          />
+        </mat-form-field>
+        <br />
+        <mat-form-field>
+          <mat-label>Cant.Fila</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="200"
+            placeholder="Celin"
+            autocomplete="off"
+            formControlName="cantidadFila"
+          />
+        </mat-form-field>
+
+        <br />
+        <mat-form-field>
+          <mat-label>Cant.Asientos</mat-label>
+          <input
+            matInput
+            #input
+            maxlength="100"
+            placeholder="3000"
+            autocomplete="off"
+            formControlName="cantidadAsientos"
+          />
+        </mat-form-field>
+        <br />
+        <button
+          mat-raised-button
+          color="accent"
+          routerLink="/mantenimientoAvion"
+          routerLinkActive="router-link-active"
+        >
+          Regresar
+        </button>
+        <span *ngIf="isInsertar">
           <button
+            style="margin-left: 20px"
             mat-raised-button
             color="accent"
-            routerLink="/mantenimientoAvion"
-            routerLinkActive="router-link-active"
+            type="submit"
+            [disabled]="form.invalid"
+            (click)="saveAvion()"
           >
-            Regresar
+            Guardar factura
           </button>
-          <span *ngIf="isInsertar">
-            <button
-              style="margin-left: 20px"
-              mat-raised-button
-              color="accent"
-              type="submit"
-              [disabled]="form.invalid"
-              (click)="saveAvion()"
-            >
-              Guardar factura
-            </button>
-          </span>
-          <span *ngIf="!isInsertar">
-            <button
-              style="margin-left: 20px"
-              mat-raised-button
-              color="accent"
-              type="submit"
-              [disabled]="form.invalid"
-              (click)="modificarAvion()"
-            >
-              Modificar factura
-            </button>
-          </span>
-        </form>
-      </mat-card>
-    </div>
+        </span>
+        <span *ngIf="!isInsertar">
+          <button
+            style="margin-left: 20px"
+            mat-raised-button
+            color="accent"
+            type="submit"
+            [disabled]="form.invalid"
+            (click)="modificarAvion()"
+          >
+            Modificar factura
+          </button>
+        </span>
+      </form>
+    </mat-card>
   </div>
-  
+</div>
