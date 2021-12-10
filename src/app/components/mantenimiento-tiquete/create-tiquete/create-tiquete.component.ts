@@ -40,7 +40,7 @@ export class CreateTiqueteComponent implements OnInit {
     //Cuando se inicializa el compomente de consulta si el ID fue enviado por parametro
     this.activeRouter.params.subscribe((params: Params) => {
       console.log(params);
-      this.idVuelo = params['_id'];
+      this.idVuelo = params['id'];
 
       //se consultan los datos del vuelo
       if (this.idVuelo !== undefined) {
@@ -96,7 +96,7 @@ export class CreateTiqueteComponent implements OnInit {
       next: (res: any) => {
         this.form.reset;
         console.log(res);
-        this.router.navigateByUrl('/dashboard/mantenimientoFactura');
+        this.router.navigateByUrl('/dashboard/mantenimientoTiqueteComponent');
 
         this._snackbar.open(
           'El vuelo fue modificada con exito, por favor verificar',
@@ -129,7 +129,7 @@ export class CreateTiqueteComponent implements OnInit {
       next: (res: any) => {
         this.form.reset;
         console.log(res);
-        this.router.navigateByUrl('/dashboard/mantenimientoVuelo');
+        this.router.navigateByUrl('/dashboard/mantenimientoTiqueteComponent');
 
         this._snackbar.open(
           'El vuelo fue agregada con exito, por favor verificar',

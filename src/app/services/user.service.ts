@@ -32,24 +32,7 @@ export class UserService {
     return this.http.get(baseUrl, {params:data});
   }
 
-  /*
-  getAll(): Observable<User[]> {
-    return this.http.get<User[]>(baseUrl);
+  get(id: any): Observable<User> {
+    return this.http.get(`${baseUrl}/${id}`);
   }
-
-  update(id: any, data: any): Observable<any> {
-    return this.http.put(`${baseUrl}/${id}`, data);
-  }
-
-  delete(id: any): Observable<any> {
-    return this.http.delete(`${baseUrl}/${id}`);
-  }
-
-  deleteAll(): Observable<any> {
-    return this.http.delete(baseUrl);
-  }
-
-  findByTitle(title: any): Observable<User[]> {
-    return this.http.get<User[]>(`${baseUrl}?title=${title}`);
-  }*/
 }

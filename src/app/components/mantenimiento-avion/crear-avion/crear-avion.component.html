@@ -5,15 +5,31 @@
     </mat-toolbar>
   </div>
   <div class="contenido">
-    <mat-card style="margin-top: 10px" style="text-align: left">
+    <mat-card>
       <form [formGroup]="form">
         <br />
+        <span *ngIf="!isInsertar">
+          <mat-form-field>
+            <mat-label>Codigo</mat-label>
+            <input
+              matInput
+              #input
+              maxlength="100"
+              placeholder="259898959"
+              autocomplete="off"
+              formControlName="_id"
+             
+            />
+          </mat-form-field>
+          <br />
+        </span>
+
         <mat-form-field>
           <mat-label>Nombre</mat-label>
           <input
             matInput
             #input
-            maxlength="200"
+            maxlength="100"
             placeholder="Celin"
             autocomplete="off"
             formControlName="nombre"
@@ -62,7 +78,7 @@
             [disabled]="form.invalid"
             (click)="saveAvion()"
           >
-            Guardar factura
+            Guardar avión
           </button>
         </span>
         <span *ngIf="!isInsertar">
@@ -74,7 +90,7 @@
             [disabled]="form.invalid"
             (click)="modificarAvion()"
           >
-            Modificar factura
+            Modificar avión
           </button>
         </span>
       </form>

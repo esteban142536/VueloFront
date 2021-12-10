@@ -1,22 +1,21 @@
-.mantenimiento-usuario{
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 7%;
-    padding-bottom: 8%;
-    
+.mantenimiento-usuario {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 7%;
+  padding-bottom: 8%;
 }
 
-table{
-    width: 100%;
+table {
+  width: 100%;
 }
 
-.filtro{
-    min-width: 150px;
-    max-width: 400px;
-    width: 100%;
+.filtro {
+  min-width: 150px;
+  max-width: 400px;
+  width: 100%;
 }
 
-.filtro-input{
-    width: 100%;
+.filtro-input {
+  width: 100%;
 }

@@ -26,15 +26,14 @@
 
 .content2 {
   width: 470px;
-
 }
 
-.content2 h1{
-    font-weight: bolder;
+.content2 h1 {
+  font-weight: bolder;
 }
 
-.content2 p{
-    font-size: 18px;
+.content2 p {
+  font-size: 18px;
 }
 .content p {
   font-size: 18px;
@@ -47,8 +46,8 @@
   margin-left: 10px;
 }
 
-.border{
-    border-right: 2px solid gray;
-    margin-left: 20px;
-    margin-right: 30px;
+.border {
+  border-right: 2px solid gray;
+  margin-left: 20px;
+  margin-right: 30px;
 }

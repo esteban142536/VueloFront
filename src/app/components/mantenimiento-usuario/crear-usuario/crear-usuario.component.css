@@ -1,0 +1,25 @@
+.crearUsuario {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 7%;
+  padding-bottom: 8%;
+}
+
+.contenido{
+    text-align: center;
+}
+
+.info {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 40px;
+  padding-top: 10px;
+}
+
+.info-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}

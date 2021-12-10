@@ -1,37 +1,44 @@
 <nav>
+  <mat-toolbar color="primary" class="mat-elevation-z6">
+    <a mat-button>
+      <img
+        class="logo"
+        src="assets/img/logo.png"
+        alt="Logo"
+        routerLink="home"
+      />
+    </a>
 
-    <mat-toolbar color="primary" class=mat-elevation-z6>
-        <a mat-button>
-            <img class="logo" src="assets/img/logo.png" alt="Logo" routerLink="home">
-        </a>
+    <a mat-button routerLink="home">Inicio</a>
+    <a mat-button routerLink="tiquete">Vuelo</a>
 
-        <a mat-button routerLink="home">Inicio</a>
-        <a mat-button routerLink="tiquete">Vuelo</a>
+    <a>
+      <button mat-button [matMenuTriggerFor]="administrativo">
+        Administrativo
+      </button>
+    </a>
 
-        <a>
-            <button mat-button [matMenuTriggerFor]="administrativo">Administrativo</button>
-        </a> 
+    <mat-menu #administrativo="matMenu">
+      <button mat-menu-item [matMenuTriggerFor]="mantenimiento">
+        Mantenimiento
+      </button>
+    </mat-menu>
 
-        <mat-menu #administrativo="matMenu">
-            <button mat-menu-item [matMenuTriggerFor]="mantenimiento">Mantenimiento</button>
-            <button mat-menu-item>Reporte</button>
-        </mat-menu>
+    <mat-menu #mantenimiento="matMenu">
+      <button mat-menu-item routerLink="mantenimientoAvion">Avión</button>
+      <button mat-menu-item routerLink="mantenimientoTiquete">Vuelo</button>
+      <button mat-menu-item routerLink="mantenimientoUsuario">Usuario</button>
+      <button mat-menu-item routerLink="mantenimientoFactura">Factura</button>
+    </mat-menu>
 
-        <mat-menu #mantenimiento="matMenu">
-            <button mat-menu-item routerLink="mantenimientoAvion">Avión</button>
-            <button mat-menu-item routerLink="mantenimientoTiquete"> Vuelo</button>
-            <button mat-menu-item routerLink="mantenimientoUsuario">Usuario</button>
-            <button mat-menu-item routerLink="mantenimientoFactura">Factura</button>
-        </mat-menu>
+    <a mat-button routerLink="historia">Historia</a>
+    <a mat-button routerLink="acercaDe">Equipo</a>
+    <a mat-button routerLink="contactenos">Contáctenos</a>
 
-        <a mat-button routerLink="historia">Historia</a>
-        <a mat-button routerLink="acercaDe">Equipo</a>
-        <a mat-button routerLink="contactenos">Contáctenos</a>
+    <div class="spacer"></div>
 
-        <div class="spacer"></div>
-
-        <div class="acceder">
-            <a mat-flat-button routerLink="login" color="accent">Acceder</a>
-        </div>
-    </mat-toolbar>
+    <div class="acceder">
+      <a mat-flat-button routerLink="login" color="accent">Acceder</a>
+    </div>
+  </mat-toolbar>
 </nav>

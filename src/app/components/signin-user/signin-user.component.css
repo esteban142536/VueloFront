@@ -1,4 +1,4 @@
-.signin{
+.signin {
   padding-bottom: 120px;
   padding-top: 100px;
   margin-left: auto;
@@ -14,20 +14,20 @@
 }
 
 .signin-datos .mat-form-field {
-    width: 350px;
+  width: 350px;
 }
 
-.buttom{
+.buttom {
   margin-right: 20px;
   width: 8%;
 }
 
-.titulo{
+.titulo {
   font-size: 25px;
   padding-top: 10px;
 }
 
-.subtitulo{
+.subtitulo {
   font-size: 18px;
   padding-top: 10px;
 }

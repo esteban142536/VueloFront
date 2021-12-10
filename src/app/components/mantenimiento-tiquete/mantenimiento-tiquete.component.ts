@@ -22,9 +22,9 @@ export class MantenimientoTiqueteComponent implements OnInit {
     '_id',
     'marca',
     'numeroVuelo',
-    'ID_TipoAvion',
     'fechaIda',
     'ID_Ruta',
+    'acciones'
   ];
 
   dataSource!: MatTableDataSource<any>;
@@ -70,7 +70,7 @@ export class MantenimientoTiqueteComponent implements OnInit {
   eliminarVuelo(element: any) {
     swal
       .fire({
-        title: `¿Desea eliminar el vuelo #${element._id} con el número de vuelo ${element.numeroVuelo}?`,
+        title: `¿Desea eliminar el vuelo #${element._id}?`,
         icon: 'question',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -96,12 +96,12 @@ export class MantenimientoTiqueteComponent implements OnInit {
           });
         }
       });
-  } // fin del médoto de eliminar
+  }
 
   modificarVuelo(element: any) {
     swal
       .fire({
-        title: `¿Desea eliminar el vuelo #${element._id} con el número de vuelo ${element.numeroVuelo}?`,
+        title: `¿Desea eliminar el vuelo #${element._id}?`,
         icon: 'question',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -112,8 +112,8 @@ export class MantenimientoTiqueteComponent implements OnInit {
       .then((result) => {
         if (result.isConfirmed) {
           console.log(element._id);
-          this.router.navigateByUrl(`dashboard/detalleTiquete/${element._id}`);
+          this.router.navigateByUrl(`detalleTiquete/${element._id}`);
         }
       });
-  } // fin del método modificar
+  }
 }

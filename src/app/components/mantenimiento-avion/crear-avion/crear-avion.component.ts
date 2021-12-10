@@ -11,6 +11,7 @@ import { tipoAvion } from 'src/app/models/tipoAvion.model';
   templateUrl: './crear-avion.component.html',
   styleUrls: ['./crear-avion.component.css'],
 })
+
 export class CrearAvionComponent implements OnInit {
   //Atributos del compomente
   idAvion: number = 0;
@@ -38,14 +39,15 @@ export class CrearAvionComponent implements OnInit {
     //Cuando se inicializa el compomente de consulta si el ID fue enviado por parametro
     this.activeRouter.params.subscribe((params: Params) => {
       console.log(params);
-      this.idAvion = params['_id'];
+      this.idAvion = params['id'];
 
-      //se consultan los datos del avion
+      //Se consultan los datos del avion
       if (this.idAvion !== undefined) {
         this.isInsertar = false;
         this.textPantalla = 'Modificar avión';
+        console.log('edit mode ');
 
-        //se consultan los datos del avion
+        //Se consultan los datos del avion
         this.tipoAvionServise.get(this.idAvion).subscribe({
           next: (res: any) => {
             this.avion = res;
@@ -58,15 +60,11 @@ export class CrearAvionComponent implements OnInit {
 
             console.log(this.avion);
 
-            this._snackbar.open(
-              'El avión fue cargada con exito, por favor verificar',
-              '',
-              {
-                duration: 5000,
-                horizontalPosition: 'center',
-                verticalPosition: 'bottom',
-              }
-            );
+            this._snackbar.open('La factura fue cargada con exito, por favor verificar', '', {
+              duration: 5000,
+              horizontalPosition: 'center',
+              verticalPosition: 'bottom',
+            });
           },
           error: (e: any) => console.error(e),
         });
@@ -75,7 +73,7 @@ export class CrearAvionComponent implements OnInit {
     });
   }
 
-  //Método para modificar una factura
+  //Método para modificar un avion
   modificarAvion(): void {
     const data = {
       _id: this.form.value._id,
@@ -90,17 +88,13 @@ export class CrearAvionComponent implements OnInit {
       next: (res: any) => {
         this.form.reset;
         console.log(res);
-        this.router.navigateByUrl('/dashboard/mantenimientoAvion');
+        this.router.navigateByUrl('/mantenimientoAvion');
 
-        this._snackbar.open(
-          'El avión fue modificada con exito, por favor verificar',
-          '',
-          {
-            duration: 5000,
-            horizontalPosition: 'center',
-            verticalPosition: 'bottom',
-          }
-        );
+        this._snackbar.open('¡El avión fue modificada con exito!', '', {
+          duration: 5000,
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
       },
       error: (e: any) => console.error(e),
     });
@@ -123,15 +117,11 @@ export class CrearAvionComponent implements OnInit {
         console.log(res);
         this.router.navigateByUrl('/mantenimientoAvion');
 
-        this._snackbar.open(
-          'El avión fue agregada con exito, por favor verificar',
-          '',
-          {
-            duration: 5000,
-            horizontalPosition: 'center',
-            verticalPosition: 'bottom',
-          }
-        );
+        this._snackbar.open('¡El avión fue creada con exito!', '', {
+          duration: 5000,
+          horizontalPosition: 'center',
+          verticalPosition: 'bottom',
+        });
       },
       error: (e: any) => console.error(e),
     });

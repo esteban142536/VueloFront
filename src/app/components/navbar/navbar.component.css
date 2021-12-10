@@ -4,10 +4,9 @@ a {
   font-size: 17px;
 }
 
- a:hover {
-  color: #01c9b0;
+a:hover {
+  color: white;
   font-weight: bolder;
-
 }
 
 .spacer {
@@ -19,11 +18,11 @@ a {
   height: 50px;
 }
 
-button{
+button {
   font-family: "Arial", "Helvetica,", Calibri, "Trebuchet MS", sans-serif;
   font-size: 17px;
 }
 
-button:hover{
+button:hover {
   font-weight: bolder;
 }

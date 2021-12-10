@@ -5,7 +5,7 @@
     </mat-toolbar>
   </div>
   <div class="contenido">
-    <mat-card style="margin-top: 10px" style="text-align: left">
+    <mat-card style="margin-top: 10px" style="text-align: center">
       <form [formGroup]="form">
         <br />
         <mat-form-field>
@@ -58,12 +58,12 @@
 
         <br />
         <mat-form-field>
-          <mat-label>ID_Ruta</mat-label>
+          <mat-label>Destino</mat-label>
           <input
             matInput
             #input
             maxlength="100"
-            placeholder="3000"
+            placeholder="New York"
             autocomplete="off"
             formControlName="ID_Ruta"
           />
@@ -87,7 +87,7 @@
             [disabled]="form.invalid"
             (click)="saveVuelo()"
           >
-            Guardar factura
+            Guardar vuelo
           </button>
         </span>
         <span *ngIf="!isInsertar">
@@ -99,27 +99,10 @@
             [disabled]="form.invalid"
             (click)="modificarVuelo()"
           >
-            Modificar factura
+            Modificar vuelo
           </button>
         </span>
       </form>
     </mat-card>
   </div>
 </div>
-
-<!--<p>create-tiquete works!</p>
-
-<div>
-  <br />
-  <p>ID_Avion</p>
-  <input [(ngModel)]="tiquete.ID_Avion" />
-  <br />
-  <p>destino</p>
-  <input [(ngModel)]="tiquete.codigo_Fila" />
-  <br />
-  <p>duracion</p>
-  <input [(ngModel)]="tiquete.codigo_Columna" />
-  <br />
-  <button (click)="createTiquete()" class="btn btn-success">Submit</button>
-</div>
--->

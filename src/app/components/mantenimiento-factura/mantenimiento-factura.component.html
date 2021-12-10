@@ -1,5 +1,4 @@
 <div class="mantenimiento-factura">
-
   <div class="container">
     <mat-toolbar>
       <span>Facturas</span>
@@ -11,7 +10,7 @@
 
     <button
       mat-raised-button
-      color="primary"
+      color="accent"
       routerLink="/crearfactura"
       routerLinkActive="router-link-active"
     >
@@ -71,7 +70,7 @@
         </ng-container>
       </div>
 
-        <!-- Column 5 -->
+      <!-- Column 5 -->
       <div class="columna">
         <ng-container matColumnDef="Total">
           <th mat-header-cell *matHeaderCellDef>Total</th>
@@ -118,6 +117,5 @@
       [pageSizeOptions]="[5, 10, 25, 100]"
       aria-label="Select page of users"
     ></mat-paginator>
-
   </div>
 </div>

@@ -12,20 +12,15 @@ import { UserIndexComponent } from './components/user-index/user-index.component
 import { MantenimientoAvionComponent } from './components/mantenimiento-avion/mantenimiento-avion.component';
 import { MantenimientoTiqueteComponent } from './components/mantenimiento-tiquete/mantenimiento-tiquete.component';
 import { MantenimientoUsuarioComponent } from './components/mantenimiento-usuario/mantenimiento-usuario.component';
-
 import { EditarRutaComponent } from './components/editar-ruta/editar-ruta.component';
-import { EditarVueloComponent } from './components/editar-vuelo/editar-vuelo.component';
-import { EditarTipoAvionComponent } from './components/editar-tipo-avion/editar-tipo-avion.component';
-import { AddTipoAvionComponent } from './components/add-tipo-avion/add-tipo-avion.component';
 import { FindRutaIDComponent } from './components/find-ruta-id/find-ruta-id.component';
 import { CreateRutaComponent } from './components/create-ruta/create-ruta.component';
-import { CreateVueloComponent } from './components/create-vuelo/create-vuelo.component';
 import { CreateTiqueteComponent } from './components/mantenimiento-tiquete/create-tiquete/create-tiquete.component';
-
 import { MantenimientoFacturaComponent } from './components/mantenimiento-factura/mantenimiento-factura.component';
 import { CrearAvionComponent } from './components/mantenimiento-avion/crear-avion/crear-avion.component';
 import { CrearfacturaComponent } from './components/mantenimiento-factura/crear-factura/crearfactura.component';
 import { ReportesComponent } from './components/reportes/reportes.component';
+import { CrearUsuarioComponent } from './components/mantenimiento-usuario/crear-usuario/crear-usuario.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -33,16 +28,11 @@ const routes: Routes = [
   { path: 'tiquete', component: TiqueteComponent },
   { path: 'signin', component: SigninUserComponent },
   { path: 'login', component: LoginUserComponent },
-  { path: 'addTipoAvion', component: AddTipoAvionComponent },
   { path: 'findRuta', component: FindRutaIDComponent },
   { path: 'createRuta', component: CreateRutaComponent },
-  { path: 'createVuelo', component: CreateVueloComponent },
   { path: 'createTiquete', component: CreateTiqueteComponent },
   { path: 'acercaDe', component: AcercaDeComponent },
   { path: 'editarRuta', component: EditarRutaComponent },
-  { path: 'editarVuelo', component: EditarVueloComponent },
-  { path: 'editarVuelo', component: EditarVueloComponent },
-  { path: 'editarTipoAvion', component: EditarTipoAvionComponent },
   { path: 'historia', component: HistoriaComponent },
   { path: 'contactenos', component: ContactenosComponent },
   { path: 'mantenimientoAvion', component: MantenimientoAvionComponent },
@@ -51,6 +41,8 @@ const routes: Routes = [
   { path: 'mantenimientoFactura', component: MantenimientoFacturaComponent },
   { path: 'crearfactura', component: CrearfacturaComponent },
   { path: 'crearAvion', component: CrearAvionComponent },
+  { path: 'crearUsuario', component: CrearUsuarioComponent },
+
   { path: 'facturas', component: MantenimientoFacturaComponent },
   { path: 'reportes', component: ReportesComponent },
   { path: 'detalleFactura', component: CrearfacturaComponent },
@@ -60,12 +52,13 @@ const routes: Routes = [
   { path: 'detalleAvion', component: CrearAvionComponent },
   { path: 'detalleAvion/:id', component: CrearAvionComponent },
 
-  {
-    path: 'mantenimientoTiqueteComponent',
-    component: MantenimientoTiqueteComponent,
-  },
+  { path: 'mantenimientoTiqueteComponent', component: MantenimientoTiqueteComponent,},
   { path: 'detalleTiquete', component: CreateTiqueteComponent },
   { path: 'detalleTiquete/:id', component: CreateTiqueteComponent },
+
+  { path: 'MantenimientoUsuario', component: MantenimientoUsuarioComponent,},
+  { path: 'detalleUsuario', component: CrearUsuarioComponent },
+  { path: 'detalleUsuario/:id', component: CrearUsuarioComponent },
 ];
 
 @NgModule({

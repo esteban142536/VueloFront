@@ -1,58 +1,58 @@
 footer {
-    background-color: #3f51b5;
-    padding: 60px 0 25px 0;
-    margin: auto;
-    overflow: hidden;
-    color: white;
-    font-family: "Arial", "Helvetica,", Calibri, "Trebuchet MS", sans-serif;
-  }
-  
-  .contenedor-footer {
-    display: flex;
-    justify-content: space-evenly;
-    margin: auto;
-    padding-bottom: 40px;
-    border-bottom: 1px solid gray;
-  }
-  
-  .texto_info {
-    width: 90%;
-    display: flex;
-    justify-content: space-evenly;
-  }
-  
-  .content-fu {
-    width: 300px;
-  }
-  .content-fu h3 {
-    color: white;
-    border-bottom: 1px solid #ff4081;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-    font-size: 22px;
-    text-align: center;
-    font-weight: 400;
-  }
-  
-  .content-fu p {
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  
-  .titulo-final {
-    text-align: center;
-    font-size: 16px;
-    margin: 20px 0 0 0;
-    color: white;
-  }
-  
-  .icons{
-      text-align: center;
-  }
-  
-  .icons a {
-      margin-right: 30px;
-      font-size: 50px;
-  }
+  background-color: #3f51b5;
+  padding: 60px 0 25px 0;
+  margin: auto;
+  overflow: hidden;
+  color: white;
+  font-family: "Arial", "Helvetica,", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.contenedor-footer {
+  display: flex;
+  justify-content: space-evenly;
+  margin: auto;
+  padding-bottom: 40px;
+  border-bottom: 1px solid gray;
+}
+
+.texto_info {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.content-fu {
+  width: 300px;
+}
+.content-fu h3 {
+  color: white;
+  border-bottom: 1px solid #ff4081;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 22px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.content-fu p {
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.titulo-final {
+  text-align: center;
+  font-size: 16px;
+  margin: 20px 0 0 0;
+  color: white;
+}
+
+.icons {
+  text-align: center;
+}
+
+.icons a {
+  margin-right: 30px;
+  font-size: 50px;
+}

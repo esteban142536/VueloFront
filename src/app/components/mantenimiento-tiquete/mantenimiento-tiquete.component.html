@@ -10,11 +10,11 @@
 
     <button
       mat-raised-button
-      color="primary"
+      color="accent"
       routerLink="/createTiquete"
       routerLinkActive="router-link-active"
     >
-      Agregar Factura
+      Agregar vuelo
     </button>
 
     <div *ngIf="listaVuelo.length == 0">
@@ -44,31 +44,23 @@
         </ng-container>
       </div>
 
+      <!--Column 2-->
       <div class="columna">
-        <!--Column 2-->
         <ng-container matColumnDef="marca">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Marca</th>
           <td mat-cell *matCellDef="let element">{{ element.marca }}</td>
         </ng-container>
       </div>
 
+      <!-- Column 3 -->
       <div class="columna">
-        <!-- Column 3 -->
         <ng-container matColumnDef="numeroVuelo">
           <th mat-header-cell *matHeaderCellDef>Núm. Vuelo</th>
           <td mat-cell *matCellDef="let element">{{ element.numeroVuelo }}</td>
         </ng-container>
       </div>
 
-      <div class="columna">
-        <!-- Column 4 -->
-        <ng-container matColumnDef="ID_TipoAvion">
-          <th mat-header-cell *matHeaderCellDef>Tipo de avión</th>
-          <td mat-cell *matCellDef="let element">{{ element.ID_TipoAvion }}</td>
-        </ng-container>
-      </div>
-
-      <!-- Column 5 -->
+      <!-- Column 4 -->
       <div class="columna">
         <ng-container matColumnDef="Total">
           <th mat-header-cell *matHeaderCellDef>Total</th>
@@ -76,7 +68,7 @@
         </ng-container>
       </div>
 
-      <!-- Column 6 -->
+      <!-- Column 5 -->
       <div class="columna">
         <ng-container matColumnDef="fechaIda">
           <th mat-header-cell *matHeaderCellDef>Fecha de ida</th>
@@ -84,7 +76,7 @@
         </ng-container>
       </div>
 
-      <!-- Column 7 -->
+      <!-- Column 6 -->
       <div class="columna">
         <ng-container matColumnDef="ID_Ruta">
           <th mat-header-cell *matHeaderCellDef>Ruta</th>
@@ -92,13 +84,13 @@
         </ng-container>
       </div>
 
+      <!-- Column 7 Opciones -->
       <div class="columna">
-        <!-- Column 6 Opciones -->
         <ng-container matColumnDef="acciones">
-          <th mat-header-cell *matHeaderCellDef style="text-align: right">
+          <th mat-header-cell *matHeaderCellDef>
             Acciones
           </th>
-          <td mat-cell *matCellDef="let element" style="text-align: right">
+          <td mat-cell *matCellDef="let element">
             <a (click)="modificarVuelo(element)">
               <mat-icon
                 mat-raised-button

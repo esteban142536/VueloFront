@@ -103,7 +103,7 @@ export class MantenimientoUsuarioComponent implements OnInit {
           });
         }
       });
-  } // fin del médoto de eliminar
+  }
 
   modificarUser(element: any) {
     swal
@@ -119,8 +119,8 @@ export class MantenimientoUsuarioComponent implements OnInit {
       .then((result) => {
         if (result.isConfirmed) {
           console.log(element._id);
-          this.router.navigateByUrl(`dashboard/detalleUser/${element._id}`);
+          this.router.navigateByUrl(`detalleUsuario/${element._id}`);
         }
       });
-  } // fin del método modificar
+  }
 }

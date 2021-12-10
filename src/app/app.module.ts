@@ -9,25 +9,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './components/home/home.component';
 import { SigninUserComponent } from './components/signin-user/signin-user.component';
 import { LoginUserComponent } from './components/login-user/login-user.component';
-
 import { UserIndexComponent } from './components/user-index/user-index.component';
 import { MantenimientoUsuarioComponent } from './components/mantenimiento-usuario/mantenimiento-usuario.component';
-
-import { AddTipoAvionComponent } from './components/add-tipo-avion/add-tipo-avion.component';
-import { EditarVueloComponent } from './components/editar-vuelo/editar-vuelo.component';
-import { EditarTipoAvionComponent } from './components/editar-tipo-avion/editar-tipo-avion.component';
 import { MantenimientoAvionComponent } from './components/mantenimiento-avion/mantenimiento-avion.component';
-
 import { TiqueteComponent } from './components/tiquete/tiquete.component';
 import { CreateTiqueteComponent } from './components/mantenimiento-tiquete/create-tiquete/create-tiquete.component';
-import { EditarTiqueteComponent } from './components/editar-tiquete/editar-tiquete.component';
 import { MantenimientoTiqueteComponent } from './components/mantenimiento-tiquete/mantenimiento-tiquete.component';
-
 import { FindRutaIDComponent } from './components/find-ruta-id/find-ruta-id.component';
 import { CreateRutaComponent } from './components/create-ruta/create-ruta.component';
-import { CreateVueloComponent } from './components/create-vuelo/create-vuelo.component';
 import { EditarRutaComponent } from './components/editar-ruta/editar-ruta.component';
-
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { HistoriaComponent } from './components/historia/historia.component';
 import { ContactenosComponent } from './components/contactenos/contactenos.component';
@@ -63,9 +53,10 @@ import { MatTooltipModule} from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DashborahComponent } from './components/dashborah/dashborah.component';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatListModule} from '@angular/material/list';
+import { MatTabsModule} from '@angular/material/tabs';
+import { MatListModule} from '@angular/material/list';
 import { CrearAvionComponent } from './components/mantenimiento-avion/crear-avion/crear-avion.component';
+import { CrearUsuarioComponent } from './components/mantenimiento-usuario/crear-usuario/crear-usuario.component';
 
 @NgModule({
   declarations: [
@@ -73,18 +64,13 @@ import { CrearAvionComponent } from './components/mantenimiento-avion/crear-avio
     SigninUserComponent,
     LoginUserComponent,
     UserIndexComponent,
-    AddTipoAvionComponent,
     FindRutaIDComponent,
     CreateRutaComponent,
-    CreateVueloComponent,
     AcercaDeComponent,
     EditarRutaComponent,
-    EditarVueloComponent,
-    EditarTipoAvionComponent,
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    EditarTiqueteComponent,
     CreateTiqueteComponent,
     TiqueteComponent,
     HistoriaComponent,
@@ -98,6 +84,7 @@ import { CrearAvionComponent } from './components/mantenimiento-avion/crear-avio
     DashborahComponent,
     ReportesComponent,
     CrearAvionComponent,
+    CrearUsuarioComponent,
   ],
   imports: [
     AppRoutingModule,

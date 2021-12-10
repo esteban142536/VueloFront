@@ -24,10 +24,11 @@ export class MantenimientoAvionComponent implements OnInit {
     'nombre',
     'cantidadFila',
     'cantidadAsientos',
+    'acciones'
   ];
   dataSource!: MatTableDataSource<any>;
 
-  //Para la paginación
+  //Paginación
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
@@ -68,7 +69,7 @@ export class MantenimientoAvionComponent implements OnInit {
   eliminarAvion(element: any) {
     swal
       .fire({
-        title: `¿Desea eliminar el avión #${element._id} la a nombre de ${element.nombre}?`,
+        title: `¿Desea eliminar el avión #${element._id} a nombre de ${element.nombre}?`,
         icon: 'question',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -84,7 +85,7 @@ export class MantenimientoAvionComponent implements OnInit {
               this.consultarAvion();
               console.log(data);
 
-              this._snackbar.open('El avión eliminada correctamente', '', {
+              this._snackbar.open('El avión fue eliminada correctamente', '', {
                 duration: 5000,
                 horizontalPosition: 'center',
                 verticalPosition: 'bottom',
@@ -94,12 +95,12 @@ export class MantenimientoAvionComponent implements OnInit {
           });
         }
       });
-  } // fin del médoto de eliminar
+  }
 
   modificarAvion(element: any) {
     swal
       .fire({
-        title: `¿Desea eliminar el avión #${element._id} la a nombre de ${element.nombre}?`,
+        title: `¿Desea modificar el avión #${element._id} a nombre de ${element.nombre}?`,
         icon: 'question',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -110,8 +111,8 @@ export class MantenimientoAvionComponent implements OnInit {
       .then((result) => {
         if (result.isConfirmed) {
           console.log(element._id);
-          this.router.navigateByUrl(`dashboard/detalleAvion/${element._id}`);
+          this.router.navigateByUrl(`detalleAvion/${element._id}`);
         }
       });
-  } // fin del método modificar
+  }
 }
