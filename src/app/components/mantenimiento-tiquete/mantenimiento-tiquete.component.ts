@@ -13,7 +13,6 @@ import swal from 'sweetalert2';
   templateUrl: './mantenimiento-tiquete.component.html',
   styleUrls: ['./mantenimiento-tiquete.component.css'],
 })
-
 export class MantenimientoTiqueteComponent implements OnInit {
   //Lista de tiquetes
   listaVuelo: vuelo[] = [];
@@ -25,7 +24,7 @@ export class MantenimientoTiqueteComponent implements OnInit {
     'numeroVuelo',
     'ID_TipoAvion',
     'fechaIda',
-    'ID_Ruta'
+    'ID_Ruta',
   ];
 
   dataSource!: MatTableDataSource<any>;

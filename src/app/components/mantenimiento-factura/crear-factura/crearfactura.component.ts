@@ -39,13 +39,14 @@ export class CrearfacturaComponent implements OnInit {
   ngOnInit(): void {
     //Cuando se inicializa el compomente de consulta si el ID fue enviado por parametro
     this.activeRouter.params.subscribe((params: Params) => {
-      console.log(params);
-      this.idFactura = params['_id'];
+      console.log('id de factura',params);
+      this.idFactura = params['id'];
 
       //se consultan los datos de la factura
       if (this.idFactura !== undefined) {
         this.isInsertar = false;
         this.textPantalla = 'Modificar factura';
+        console.log("edit mode ");
 
         //se consultan los datos de la factura
         this.facturaService.get(this.idFactura).subscribe({

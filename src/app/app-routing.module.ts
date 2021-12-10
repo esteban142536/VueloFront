@@ -25,6 +25,7 @@ import { CreateTiqueteComponent } from './components/mantenimiento-tiquete/creat
 import { MantenimientoFacturaComponent } from './components/mantenimiento-factura/mantenimiento-factura.component';
 import { CrearAvionComponent } from './components/mantenimiento-avion/crear-avion/crear-avion.component';
 import { CrearfacturaComponent } from './components/mantenimiento-factura/crear-factura/crearfactura.component';
+import { ReportesComponent } from './components/reportes/reportes.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -49,7 +50,22 @@ const routes: Routes = [
   { path: 'mantenimientoUsuario', component: MantenimientoUsuarioComponent },
   { path: 'mantenimientoFactura', component: MantenimientoFacturaComponent },
   { path: 'crearfactura', component: CrearfacturaComponent },
-  { path: 'crearAvion', component: CrearAvionComponent }
+  { path: 'crearAvion', component: CrearAvionComponent },
+  { path: 'facturas', component: MantenimientoFacturaComponent },
+  { path: 'reportes', component: ReportesComponent },
+  { path: 'detalleFactura', component: CrearfacturaComponent },
+  { path: 'detalleFactura/:id', component: CrearfacturaComponent },
+
+  { path: 'mantenimientoAvion', component: MantenimientoAvionComponent },
+  { path: 'detalleAvion', component: CrearAvionComponent },
+  { path: 'detalleAvion/:id', component: CrearAvionComponent },
+
+  {
+    path: 'mantenimientoTiqueteComponent',
+    component: MantenimientoTiqueteComponent,
+  },
+  { path: 'detalleTiquete', component: CreateTiqueteComponent },
+  { path: 'detalleTiquete/:id', component: CreateTiqueteComponent },
 ];
 
 @NgModule({

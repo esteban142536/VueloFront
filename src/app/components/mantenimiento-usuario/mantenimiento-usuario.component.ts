@@ -89,11 +89,15 @@ export class MantenimientoUsuarioComponent implements OnInit {
               this.consultarUser();
               console.log(data);
 
-              this._snackbar.open('El usuario fue eliminada correctamente', '', {
-                duration: 5000,
-                horizontalPosition: 'center',
-                verticalPosition: 'bottom',
-              });
+              this._snackbar.open(
+                'El usuario fue eliminada correctamente',
+                '',
+                {
+                  duration: 5000,
+                  horizontalPosition: 'center',
+                  verticalPosition: 'bottom',
+                }
+              );
             },
             error: (e: any) => console.error(e),
           });
@@ -104,7 +108,7 @@ export class MantenimientoUsuarioComponent implements OnInit {
   modificarUser(element: any) {
     swal
       .fire({
-        title: `¿Desea eliminar el usuario #${element._id} a nombre de ${element.nombre} ${element.apellido}?`,
+        title: `¿Desea modificar el usuario #${element._id} a nombre de ${element.nombre} ${element.apellido}?`,
         icon: 'question',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',

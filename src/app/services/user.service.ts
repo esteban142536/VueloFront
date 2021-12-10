@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { User } from '../models/user.model';
 
-const baseUrl = 'http://localhost:4000/api';
+const baseUrl = 'http://localhost:4000/api/user';
 
 @Injectable({
   providedIn: 'root'
@@ -11,9 +11,9 @@ const baseUrl = 'http://localhost:4000/api';
 export class UserService {
 
   constructor(private http: HttpClient) { }
-  
+
   getAll(): Observable<User[]> {
-    return this.http.get<User[]>(baseUrl);
+    return this.http.get<User[]>(baseUrl + '/all');
   }
 
   create(data: User): Observable<User> {

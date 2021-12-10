@@ -6,7 +6,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { factura } from 'src/app/models/factura.model';
 import { facturaServise } from 'src/app/services/factura.service';
 import { Router } from '@angular/router';
-import swal from 'sweetalert2'; 
+import swal from 'sweetalert2';
 
 @Component({
   selector: 'dreamOut-mantenimiento-factura',
@@ -77,7 +77,7 @@ export class MantenimientoFacturaComponent implements OnInit {
              next: (data) => {
                this.consultarFacturas();
                console.log(data);
-              
+
                this._snackbar.open('La factura eliminada correctamente', '',{
                   duration: 5000,
                   horizontalPosition: 'center',
@@ -86,9 +86,9 @@ export class MantenimientoFacturaComponent implements OnInit {
              },
              error: (e: any) => console.error(e)
           });
-      } 
+      }
     });
-    
+
   } // fin del médoto de eliminar
 
   modificarFactura(element:any){
@@ -103,8 +103,8 @@ export class MantenimientoFacturaComponent implements OnInit {
     }).then((result) => {
       if (result.isConfirmed) {
         console.log(element._id);
-        this.router.navigateByUrl(`dashboard/detalleFactura/${element._id}`);
-      } 
+        this.router.navigateByUrl(`detalleFactura/${element._id}`);
+      }
     });
   }// fin del método modificar
 }
