@@ -115,12 +115,12 @@ export class CreateTiqueteComponent implements OnInit {
   //Método para guardar un nueva vuelo
   saveVuelo(): void {
     const data = {
-      _id: null,
-      numeroVuelo: this.vuelo.numeroVuelo,
-      fechaIda: this.vuelo.fechaIda,
-      ID_TipoAvion: this.vuelo.ID_TipoAvion,
-      ID_Ruta: this.vuelo.ID_Ruta,
-      marca: this.vuelo.marca,
+      //_id: null,
+      numeroVuelo: this.form.value.numeroVuelo,
+      fechaIda: this.form.value.fechaIda,
+      ID_TipoAvion: this.form.value.ID_TipoAvion,
+      ID_Ruta: this.form.value.ID_Ruta,
+      marca: this.form.value.marca,
     };
 
     console.log('data in save vuelo', data);
@@ -129,7 +129,7 @@ export class CreateTiqueteComponent implements OnInit {
       next: (res: any) => {
         this.form.reset;
         console.log(res);
-        this.router.navigateByUrl('/dashboard/mantenimientoTiqueteComponent');
+        this.router.navigateByUrl('mantenimientoTiqueteComponent');
 
         this._snackbar.open(
           'El vuelo fue agregada con exito, por favor verificar',

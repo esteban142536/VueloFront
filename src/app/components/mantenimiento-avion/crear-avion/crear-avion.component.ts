@@ -76,7 +76,7 @@ export class CrearAvionComponent implements OnInit {
   //Método para modificar un avion
   modificarAvion(): void {
     const data = {
-      _id: null, //this.form.value._id,
+      //_id: this.form.value._id,
       nombre: this.form.value.nombre,
       cantidadFila: this.form.value.cantidadFila,
       cantidadAsientos: this.form.value.cantidadAsientos,
