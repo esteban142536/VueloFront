@@ -115,7 +115,7 @@ export class CreateTiqueteComponent implements OnInit {
   //Método para guardar un nueva vuelo
   saveVuelo(): void {
     const data = {
-      //_id: null,
+      _id: null,
       numeroVuelo: this.form.value.numeroVuelo,
       fechaIda: this.form.value.fechaIda,
       ID_TipoAvion: this.form.value.ID_TipoAvion,
