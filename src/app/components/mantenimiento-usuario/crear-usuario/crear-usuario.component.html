@@ -11,6 +11,7 @@
         <div class="info">
           <div class="info-content">
             <div class="content">
+              <!--
               <div class="signin-datos">
                 <span *ngIf="!isInsertar">
                   <mat-form-field>
@@ -27,7 +28,7 @@
                   <br />
                 </span>
               </div>
-
+              -->
               <div class="signin-datos">
                 <mat-form-field>
                   <mat-label>Tipo de usuario</mat-label>
@@ -86,6 +87,30 @@
             </div>
 
             <div class="content">
+              <div class="signin-datos">
+                <mat-form-field>
+                  <mat-label>Contraseña</mat-label>
+                  <input
+                    matInput
+                    #input
+                    autocomplete="off"
+                    formControlName="email"
+                    matInput
+                    [type]="hide ? 'password' : 'text'"
+                  />
+                  <button
+                    mat-icon-button
+                    matSuffix
+                    (click)="hide = !hide"
+                    [attr.aria-label]="'Esconder contraseña'"
+                    [attr.aria-pressed]="hide"
+                  >
+                    <mat-icon>{{
+                      hide ? "visibility_off" : "visibility"
+                    }}</mat-icon>
+                  </button>
+                </mat-form-field>
+              </div>
               <div class="signin-datos">
                 <mat-form-field>
                   <mat-label>Fecha de nacimiento</mat-label>

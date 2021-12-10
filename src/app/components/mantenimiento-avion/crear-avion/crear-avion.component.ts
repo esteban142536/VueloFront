@@ -52,7 +52,7 @@ export class CrearAvionComponent implements OnInit {
           next: (res: any) => {
             this.avion = res;
             this.form.setValue({
-              _id: this.avion._id,
+              //_id: this.avion._id,
               nombre: this.avion.nombre,
               cantidadFila: this.avion.cantidadFila,
               cantidadAsientos: this.avion.cantidadAsientos,
@@ -76,7 +76,7 @@ export class CrearAvionComponent implements OnInit {
   //Método para modificar un avion
   modificarAvion(): void {
     const data = {
-      _id: this.form.value._id,
+      _id: null, //this.form.value._id,
       nombre: this.form.value.nombre,
       cantidadFila: this.form.value.cantidadFila,
       cantidadAsientos: this.form.value.cantidadAsientos,

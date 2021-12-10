@@ -18,6 +18,7 @@ export class CrearUsuarioComponent implements OnInit {
   isInsertar: boolean = true;
   form: FormGroup;
   user = new User();
+  hide = true;
 
   //Se inyectan los objetos requerios y se crear el formulario
   constructor(
@@ -85,7 +86,7 @@ export class CrearUsuarioComponent implements OnInit {
   //Método para modificar un user
   modificarUsuario(): void {
     const data = {
-      _id: this.form.value._id,
+      _id: null, //this.form.value._id,
       nombre: this.form.value.nombre,
       apellido: this.form.value.apellido,
       tipoUsuario: this.form.value.tipoUsuario,
