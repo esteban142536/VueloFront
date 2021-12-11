@@ -24,7 +24,6 @@ export class MantenimientoUsuarioComponent implements OnInit {
     'apellido',
     'tipoUsuario',
     'email',
-    'fecNacimiento',
     'edad',
     'direccion',
     'telefono',

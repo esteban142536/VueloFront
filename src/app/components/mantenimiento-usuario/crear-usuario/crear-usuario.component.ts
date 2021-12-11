@@ -29,6 +29,7 @@ export class CrearUsuarioComponent implements OnInit {
     private activeRouter: ActivatedRoute
   ) {
     this.form = this.fb.group({
+      _id:[''],
       nombre: ['', Validators.required],
       apellido: ['', Validators.required],
       tipoUsuario: ['', Validators.required],
@@ -50,7 +51,7 @@ export class CrearUsuarioComponent implements OnInit {
       if (this.idUser !== undefined) {
         this.isInsertar = false;
         this.textPantalla = 'Modificar usuario';
-        console.log('edit mode ');
+        console.log('edit mode ', this.idUser);
 
         //Se consultan los datos del user
         this.userService.get(this.idUser).subscribe({
@@ -62,7 +63,7 @@ export class CrearUsuarioComponent implements OnInit {
               apellido: this.user.apellido,
               tipoUsuario: this.user.tipoUsuario,
               email: this.user.email,
-              fecNacimiento: this.user.fecNacimiento,
+              fecNacimiento: this.user.fecNacimiento||'',
               edad: this.user.edad,
               direccion: this.user.direccion,
               telefono: this.user.telefono,
@@ -78,7 +79,6 @@ export class CrearUsuarioComponent implements OnInit {
           },
           error: (e: any) => console.error(e),
         });
-        console.log('_id user' + this.idUser);
       }
     });
   }
@@ -86,7 +86,7 @@ export class CrearUsuarioComponent implements OnInit {
   //Método para modificar un user
   modificarUsuario(): void {
     const data = {
-      _id: null, //this.form.value._id,
+      _id: this.form.value._id, //this.form.value._id,
       nombre: this.form.value.nombre,
       apellido: this.form.value.apellido,
       tipoUsuario: this.form.value.tipoUsuario,
@@ -97,7 +97,7 @@ export class CrearUsuarioComponent implements OnInit {
       telefono: this.form.value.telefono,
     };
 
-    console.log(data);
+    console.log('Modificar ', this.idUser, data);
 
     this.userService.update(this.idUser, data).subscribe({
       next: (res: any) => {

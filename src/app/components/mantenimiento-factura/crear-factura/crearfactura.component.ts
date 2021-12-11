@@ -89,10 +89,7 @@ export class CrearfacturaComponent implements OnInit {
       IVA: this.form.value.IVA,
       Total: this.form.value.Total,
     };
-    this.activeRouter.params.subscribe((params: Params) => {
-      data._id = params.id;
-    });
-    console.log('update data',data);
+    console.log('update data\n', this.idFactura, data);
 
     this.facturaService.update(this.idFactura, data).subscribe({
       next: (res: any) => {
